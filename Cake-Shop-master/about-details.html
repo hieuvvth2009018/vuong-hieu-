@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="images/logo2.png">
+    <title>Cake Shop</title>
+    <!--bootstrap css-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!--main css-->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--owl carousel css-->
+    <link rel="stylesheet" href="owlcarousel/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="owlcarousel/css/owl.theme.default.min.css">
+    <!--font awesome-->
+    <script src="js/all.js"></script>
+    <script src="https://kit.fontawesome.com/f8199a7d4e.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+<header id="header">
+    <!--navbar-->
+    <nav class="navbar navbar-expand-lg mx-4">
+        <!--logo-->
+        <a href="index.html" class="navbar-brand">
+            <!--
+                https://www.iconfinder.com/icons/2138186/baker_bakery_cupcake_dessert_food_icon
+            -->
+            <img src="images/thecakeshop.png" style="width: 100px;" alt="main icon">
+         </a>
+         <!-- end of logo-->
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
+            <span class="toggler-icon">
+                <i class="fas fa-bars"></i>
+             </span>
+         </button>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <!--menu-->
+            <ul class="navbar-nav text-capitalize mx-auto" id="menu">
+                <li class="nav-item active">
+                    <a href="#header" class="nav-link">home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about-us.html" class="nav-link">aboutUs</a>
+                </li>
+                <li class="nav-item">
+                    <a href="all-product.html" class="nav-link">allProducts</a>
+                </li>
+                <li class="nav-item">
+                    <a href="order-form.html" class="nav-link">order</a>
+                </li>
+                <li class="nav-item">
+                    <a href="news.html" class="nav-link">news</a>
+                </li>
+                <li class="nav-item" id="sm-cart">
+                    <a href="#" class="nav-link" data-toggle="modal" data-target="#cart-modal">cart</a>
+                </li>
+            </ul>
+            <!--end of menu-->
+            <div class="nav-info-items d-none d-lg-flex">
+                <!--phone info-->
+                <div class="nav-info align-items-center d-flex justify-content-between mx-lg-5">
+                    <span class="nav-icon mx-lg-3">
+                    </span>
+                    <a href="sign-up.html"><button type="submit" class="btn btn-pink text-uppercase mt-3" style="margin: 10px">sign up</button></a>
+                    <a href="sign-in.html"><button type="submit" class="btn btn-pink text-uppercase mt-3" style="margin: 10px">sign in</button></a>
+                </div>
+                <!--end of phone info-->
+<!--                <div class="nav-info align-items-center d-flex justify-content-between mx-lg-1">-->
+<!--                    <div id="myNav" class="overlay">-->
+<!--                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>-->
+<!--                        <div class="overlay-content">-->
+<!--                            <a href="sign-in.html">Sign in</a>-->
+<!--                            <a href="sign-up.html">Sign up</a>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <a href="#"><i class="fas fa-user-circle" onclick="openNav()" style="font-size: 40px; color: hotpink"></i></a>-->
+<!--                </div>-->
+                <!--cart info-->
+                <button type="button" class="btn btn-pink align-items-center d-flex justify-content-between mx-lg-5"
+                        data-toggle="modal" data-target="#myModal">
+                        <span class="cart-info_icon mx-lg-3">
+                            <i class="fa fa-shopping-bag"></i>
+                        </span>
+                </button>
+
+                <!-- The Modal -->
+                <div class="modal fade" id="myModal">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <h4 class="modal-title d-flex justify-content-between" style="text-align: center;">
+                                    Shopping Cart Information</h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                                <div class="cart-row">
+                                    <span class="cart-item cart-header cart-column">Name</span>
+                                    <span class="cart-price cart-header cart-column">Price</span>
+                                    <span class="cart-quantity cart-header cart-column">Quantity</span>
+                                </div>
+                                <div class="cart-items">
+                                    <div class="cart-row">
+                                        <div class="cart-item cart-column">
+                                            <img src="images-cart/cupcake-1.jpg" alt="" class="img-fluid rounded-circle">
+                                            <input type="hidden" value="">
+                                            <span class="cart-item-title">Bla bla</span>
+                                        </div>
+                                        <span class="cart-price cart-column">$5</span>
+                                        <div class="cart-quantity cart-column">
+                                            <input class="cart-quantity-input" type="number" value="1">
+                                            <button class="btn btn-danger" type="button">Remove</button>
+                                        </div>
+                                    </div>
+                                    <div class="cart-row">
+                                        <div class="cart-item cart-column">
+                                            <img src="images-cart/cupcake-2.jpg" alt="" class="img-fluid rounded-circle">
+                                            <input type="hidden" value="">
+                                            <span class="cart-item-title">Alo alo</span>
+                                        </div>
+                                        <span class="cart-price cart-column">$5</span>
+                                        <div class="cart-quantity cart-column">
+                                            <input class="cart-quantity-input" type="number" value="1">
+                                            <button class="btn btn-danger" type="button">Remove</button>
+                                        </div>
+                                    </div>
+                                    <div class="cart-total">
+                                        <strong class="cart-total-title">Total:</strong>
+                                        <span class="cart-total-price">$10</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary close-footer" id="close">Close</button>
+                                <a href="cart.html"><button type="button" class="btn btn-primary order">Check out</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--end of cart info-->
+            </div>
+        </div>
+    </nav>
+    <!--end of navbar-->
+</header>
+<!--end of header-->
+<!--about banner-->
+<section class="about-bcg">
+    <div class="container">
+        <div class="row">
+            <div class="col-10 mx-auto text-center">
+                <h3 class="text-capitalize mb-0"> welcome to our</h3>
+                <strong class="banner-title text-capitalize">cake shop</strong>
+                <div class="service-hour">
+                    <h6 class="text-uppercase"><strong> service hour </strong></h6>
+                    <p class="mb-0 text-capitalize text-muted">09:00 - 12:00 <strong>sturday - thursday</strong></p>
+                    <p class="mb-0 text-capitalize text-muted">03:00 - 12:00 <strong>only friday</strong></p>
+                </div>
+                <div class="crumbs">
+                    <nav aria-level="breadcrumb" class="breadcrumb-items">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="index.html">home</a></li>
+                            <li class="breadcrumb-item"><a href="about-details.html">about-details</a></li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--end of banner-->
+<!--about section-->
+<section class="about-details pt-5">
+    <div class="container">
+        <div class="row bg-gray border-radius-1 p-3">
+            <div class="col-md-6 p-3 d-flex align-items-center justify-content-center">
+                <div class="about-details-content p-3">
+                    <h1 class="text-capitalize"> since <strong class="banner-title"> 2021 </strong></h1>
+                    <p class="lead text-muted">There are countless cakes with the same attributes in Vietnam, but not everyone knows about them. Tiramisu is a famous coffee dessert cake originating from Team-Dev-200 consisting of layers of coffee-dipped Savoiardi biscuits interspersed with eggs, sugar, whipped mascarpone cheese, and cocoa powder. This cake also has another name, "paradise in the mouth", to praise the deliciousness of the Cake.</p>
+                </div>
+            </div>
+            <div class="col-md-6 p-3">
+                <div class="about-details-img">
+                    <img src="images/about-details.jpg" class="img-fluid img-thumbnail bg-pink" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--end of about section-->
+<!--team section-->
+<section class="team py-5" id="team">
+    <div class="container">
+        <!--section title-->
+        <div class="row">
+            <div class="col-10 text-center mx-auto col-md-6">
+                <h1 class="text-capitalize"> our <strong class="banner-title"> team </strong></h1>
+            </div>
+        </div>
+        <!--end od section title-->
+        <div class="row py-3">
+            <div class="owl-carousel owl-theme">
+                <!--team member-->
+                <div class="item">
+                    <div class="card">
+
+
+                        <img src="images/trans-3.png" height="400px" width="339.328px" class="card-img-top owl-lazy">
+
+                        <div class="card-body">
+                            <h5 class="card-title text-capitalize text-pink">team member</h5>
+                            <p class="card-text">Ơ Mây zing  Gút chóp </p>
+                            <div class="team-detail d-flex justify-content-center py-2">
+                                <a href="#" class="btn btn-pink text-uppercase" data-toggle="modal" data-target="#team-details">more details</a>
+                            </div>
+                        </div>
+                        <div class="card-footer d-flex justify-content-around">
+                            <a href="#" class="contact-icon">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                            <a href="#" class="contact-icon">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="contact-icon">
+                                 <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="contact-icon">
+                                <i class="fab fa-google-plus"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!--end of team member-->
+                <!--team member-->
+                <div class="item">
+                    <div class="card">
+                        <img src="images/trans-2.png" style="width: 339.328px;height: 400px;" alt="" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title text-capitalize text-pink">team member</h5>
+                            <p class="card-text">Bánh như bòi</p>
+                            <div class="team-detail d-flex justify-content-center py-2">
+                                <a href="#" class="btn btn-pink text-uppercase" data-toggle="modal" data-target="#team-details">more details</a>
+                            </div>
+                        </div>
+                        <div class="card-footer d-flex justify-content-around">
+                            <a href="#" class="contact-icon">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                            <a href="#" class="contact-icon">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="contact-icon">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="contact-icon">
+                                <i class="fab fa-google-plus"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!--end of team member-->
+                <!--team member-->
+                <div class="item">
+                    <div class="card">
+                        <img src="images/cupcake-2.jpg"alt="" style="width: 339.328px;height: 400px;"  class="card-img-top">
+
+                        <div class="card-body">
+                            <h5 class="card-title text-capitalize text-pink">team member</h5>
+                            <p class="card-text">yolooooooooooooo</p>
+                            <div class="team-detail d-flex justify-content-center py-2">
+                                <a href="#" class="btn btn-pink text-uppercase" data-toggle="modal" data-target="#team-details">more details</a>
+                            </div>
+                        </div>
+                        <div class="card-footer d-flex justify-content-around">
+                            <a href="#" class="contact-icon">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                            <a href="#" class="contact-icon">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="contact-icon">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="contact-icon">
+                                <i class="fab fa-google-plus"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!--end of team member-->
+                <!--team member-->
+                <div class="item">
+                    <div class="card">
+                        <img src="images/cupcake-1.jpg" alt="" style="width: 339.328px;height: 400px;"  class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title text-capitalize text-pink">team member</h5>
+                            <p class="card-text">Đầu bòi said : . . .</p>
+                            <div class="team-detail d-flex justify-content-center py-2">
+                                <a href="#" class="btn btn-pink text-uppercase" data-toggle="modal" data-target="#team-details">more details</a>
+                            </div>
+                        </div>
+                        <div class="card-footer d-flex justify-content-around">
+                            <a href="#" class="contact-icon">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                            <a href="#" class="contact-icon">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="contact-icon">
+                                 <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="contact-icon">
+                                <i class="fab fa-google-plus"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!--end of team member-->
+                <!--team member-->
+                <div class="item">
+                    <div class="card">
+                        <img src="images/cupcake-2.jpg" alt="" style="width: 339.328px;height: 400px;"  class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title text-capitalize text-pink">team member</h5>
+                            <p class="card-text">ABCXYZ</p>
+                            <div class="team-detail d-flex justify-content-center py-2">
+                                <a href="#" class="btn btn-pink text-uppercase" data-toggle="modal" data-target="#team-details">more details</a>
+                            </div>
+                        </div>
+                        <div class="card-footer d-flex justify-content-around">
+                            <a href="#" class="contact-icon">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                            <a href="#" class="contact-icon">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="contact-icon">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="contact-icon">
+                                <i class="fab fa-google-plus"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!--end of team member-->
+                <!--team member-->
+                <div class="item">
+                    <div class="card">
+                        <img src="images/cupcake-3.jpg" alt="" style="width: 339.328px;height: 400px;"  class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title text-capitalize text-pink">team member</h5>
+                            <p class="card-text">There are countless cakes with the same attributes in Vietnam, but not everyone knows about them.</p>
+                            <div class="team-detail d-flex justify-content-center py-2">
+                                <a href="#" class="btn btn-pink text-uppercase" data-toggle="modal" data-target="#team-details">more details</a>
+                            </div>
+                        </div>
+                        <div class="card-footer d-flex justify-content-around">
+                            <a href="#" class="contact-icon">
+                                <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                            </a>
+                            <a href="#" class="contact-icon">
+                                <i class="fa fa-twitter" aria-hidden="true"></i>
+                            </a>
+                            <a href="#" class="contact-icon">
+                                <i class="fa fa-instagram" aria-hidden="true"></i>
+                            </a>
+                            <a href="#" class="contact-icon">
+                                <i class="fa fa-google-plus" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!--end of team member-->
+            </div>
+        </div>
+    </div>
+</section>
+<!--end of team section-->
+<!--team modal-->
+<div class="modal" id="team-details" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <div class="card">
+                <img src="images/headerBcg-03.jpg" alt="" class="card-img-top">
+                <div class="card-body p-5">
+                    <h3 class="card-title text-capitalize text-pink">member name</h3>
+                    <h6 class="text-capitalize ">wedding cake specialist</h6>
+                    <p class="card-text text-muted py-4 mb-0">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique molestiae aperiam consequatur et optio eaque necessitatibus provident esse sunt saepe nulla numquam beatae dolor, quas quidem. Autem perferendis ratione doloremque sapiente unde labore nesciunt doloribus id alias! Assumenda, iure ratione.</p>
+                    <div class="contact-info">
+                        <span class="d-block py-2 text-capitalize">
+                            <i class="fas fa-map mr-2 text-pink"></i>
+                            123 main street, dhaka 1234
+                        </span>
+                        <span class="d-block py-2">
+                            <i class="fas fa-phone mr-2 text-pink"></i>
+                            +11 123 456 789
+                        </span>
+                        <span class="d-block py-2">
+                            <i class="fas fa-envelope mr-2 text-pink"></i>
+                            Team DEV 200@gmail.com
+                        </span>
+                    </div>
+                </div>
+                <div class="card-footer d-flex justify-content-around">
+                    <a href="#" class="contact-icon">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="#" class="contact-icon">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="contact-icon">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="contact-icon">
+                        <i class="fab fa-google-plus"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+</div>
+<!--end of team modal-->
+<!--review section-->
+<section class="review pb-5">
+    <div class="container">
+        <!--section title-->
+        <div class="row">
+            <div class="col-10 text-center mx-auto col-md-6">
+                <h3 class="text-capitalize pb-3"> what our client <strong class="banner-title"> says... </strong></h3>
+            </div>
+        </div>
+        <!--end of section title-->
+        <div class="owl-one owl-carousel owl-theme">
+            <div class="item">
+                <div class="row d-flex justify-content-center align-items-center">
+                    <div class="col-md-2 text-capitalize text-center mx-auto">
+                        <div class="reviewer-img p-2">
+                            <img src="images/cake-1.jpg" class="img-fluid rounded-circle" alt="">
+                        </div>
+                        <div class="reviewer-info">
+                            <h6 class="text-black mb-1"><strong> Reviewer name</strong></h6>
+                            <p class="text-black mb-0 small">Cake specialist</p>
+                            <ul class="list-inline text-pink">
+                                <li class="list-inline-item">
+                                    <i class="fas fa-star"></i>
+                                </li>
+                                <li class="list-inline-item">
+                                    <i class="fas fa-star"></i>
+                                </li>
+                                <li class="list-inline-item">
+                                    <i class="fas fa-star"></i>
+                                </li>
+                                <li class="list-inline-item">
+                                    <i class="fas fa-star-half-alt"></i>
+                                </li>
+                                <li class="list-inline-item">
+                                    <i class="far fa-star"></i>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-10">
+                        <p class=" text-muted px-3">
+                            <i class="fas fa-quote-left fa-1x text-pink mr-3"></i>
+                            There are countless cakes with the same attributes in Vietnam, but not everyone knows about them. Tiramisu is a famous coffee dessert cake originating from Team-Dev-200 consisting of layers of coffee-dipped Savoiardi biscuits interspersed with eggs, sugar, whipped mascarpone cheese, and cocoa powder. This cake also has another name, "paradise in the mouth", to praise the deliciousness of the Cake.                            <i class="fas fa-quote-right fa-1x text-pink ml-3"></i>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="row d-flex justify-content-center align-items-center">
+                    <div class="col-md-2 text-capitalize text-center mx-auto">
+                        <div class="reviewer-img p-2">
+                            <img src="images/cupcake-3.jpg" class="img-fluid rounded-circle" alt="">
+                        </div>
+                        <div class="reviewer-info">
+                            <h6 class="text-black mb-1"><strong> reviewer name</strong></h6>
+                            <p class="text-black mb-0 small">cake specialist</p>
+                            <ul class="list-inline text-pink">
+                                <li class="list-inline-item">
+                                    <i class="fas fa-star"></i>
+                                </li>
+                                <li class="list-inline-item">
+                                    <i class="fas fa-star"></i>
+                                </li>
+                                <li class="list-inline-item">
+                                    <i class="fas fa-star"></i>
+                                </li>
+                                <li class="list-inline-item">
+                                    <i class="fas fa-star-half-alt"></i>
+                                </li>
+                                <li class="list-inline-item">
+                                    <i class="far fa-star"></i>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-10">
+                        <p class=" text-muted px-3">
+                            <i class="fas fa-quote-left fa-1x text-pink mr-3"></i>
+                            There are countless cakes with the same attributes in Vietnam, but not everyone knows about them. Tiramisu is a famous coffee dessert cake originating from Team-Dev-200 consisting of layers of coffee-dipped Savoiardi biscuits interspersed with eggs, sugar, whipped mascarpone cheese, and cocoa powder. This cake also has another name, "paradise in the mouth", to praise the deliciousness of the Cake.                            <i class="fas fa-quote-right fa-1x text-pink ml-3"></i>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="row d-flex justify-content-center align-items-center">
+                    <div class="col-md-2 text-capitalize text-center mx-auto">
+                        <div class="reviewer-img p-2">
+                            <img src="images/cake-2.jpg" class="img-fluid rounded-circle" alt="">
+                        </div>
+                        <div class="reviewer-info">
+                            <h6 class="text-black mb-1"><strong> reviewer name</strong></h6>
+                            <p class="text-black mb-0 small">cake specialist</p>
+                            <ul class="list-inline text-pink">
+                                <li class="list-inline-item">
+                                    <i class="fas fa-star"></i>
+                                </li>
+                                <li class="list-inline-item">
+                                    <i class="fas fa-star"></i>
+                                </li>
+                                <li class="list-inline-item">
+                                    <i class="fas fa-star"></i>
+                                </li>
+                                <li class="list-inline-item">
+                                    <i class="fas fa-star-half-alt"></i>
+                                </li>
+                                <li class="list-inline-item">
+                                    <i class="far fa-star"></i>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-10">
+                        <p class=" text-muted px-3">
+                            <i class="fas fa-quote-left fa-1x text-pink mr-3"></i>
+                            There are countless cakes with the same attributes in Vietnam, but not everyone knows about them. Tiramisu is a famous coffee dessert cake originating from Team-Dev-200 consisting of layers of coffee-dipped Savoiardi biscuits interspersed with eggs, sugar, whipped mascarpone cheese, and cocoa powder. This cake also has another name, "paradise in the mouth", to praise the deliciousness of the Cake.
+                            <i class="fas fa-quote-right fa-1x text-pink ml-3"></i>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--end of review section-->
+<!--contact section-->
+<section class="map py-2">
+    <div class="container">
+        <div class="row">
+            <!--section title-->
+            <div class="col-10 mx-auto d-flex justify-content-center align-items-center">
+                <h1 class="text-capitalize"> Contact <strong class="banner-title"> Us </strong></h1>
+            </div>
+            <!--end of section title-->
+        </div>
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <!--google map-->
+                <div class="map">
+                    <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.0966890657864!2d105.78009371540224!3d21.028816893151134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313455f9bdf0e1c7%3A0x26caee8e7662dd9b!2zRlBUIEFwdGVjaCBIw6AgTuG7mWk!5e0!3m2!1svi!2s!4v1610006568174!5m2!1svi!2s"
+                            width="800" height="400" frameborder="0" style="border:0;" allowfullscreen=""
+                            aria-hidden="false" tabindex="0"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="contact py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-12 px-4 py-3">
+                <h4 class="text-capitalize text-pink px-4">contact form</h4>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="form">
+                            <!--name-->
+                            <div class="form-group mb-0">
+                                <input type="text" class="form-control mb-2" placeholder="Enter your Name" id="name">
+                            </div>
+                            <!--email-->
+                            <div class="form-group mb-0">
+                                <input type="text" class="form-control mb-2" placeholder="Enter your E-mail" id="email">
+                            </div>
+                            <!--message-->
+                            <div class="form-group mb-0">
+                                <textarea name="message" class="form-control mb-2" placeholder="Your Message" id="message" rows="2"></textarea>
+                            </div>
+                            <!--send button-->
+                            <button type="submit" class="btn btn-pink btn-block text-uppercase">send</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 px-4 py-3">
+                <h4 class="text-capitalize text-pink px-4">how to find us</h4>
+                <!--contact info-->
+                <div class="contact-details px-4">
+                    <dl>
+                        <dt><h5 class="mt-3">Cake Shop</h5></dt>
+                        <dd>Addresss : No8 Ton That Thuyet</dd>
+                        <dd>Phone : +1139999</dd>
+                        <dd>Email : Team DEV 200@gmail.com</dd>
+                    </dl>
+                </div>
+                <div class="d-flex justify-content-around">
+                    <a href="#" class="contact-icon">
+                        <i class='fab fa-facebook-square'></i>
+                    </a>
+                    <a href="#" class="contact-icon">
+                        <i class='fab fa-twitter'></i>
+                    </a>
+                    <a href="#" class="contact-icon">
+                        <i class='fab fa-instagram'></i>
+                    </a>
+                    <a href="#" class="contact-icon">
+                        <i class='fab fa-google-plus'></i>
+                    </a>
+                </div>
+                <!--end of contact info-->
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 px-4 py-3">
+                <h4 class="text-capitalize text-pink px-4">Sign up now</h4>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="form">
+                            <!--name-->
+                            <div class="form-group mb-0">
+                                <label for="name" class="text-capitalize mb-0">**Name**</label>
+                                <input type="text" class="form-control mb-2" placeholder="Enter your Name" id="-name">
+                            </div>
+                            <!--email-->
+                            <div class="form-group mb-0">
+                                <label for="email" class="text-capitalize mb-0">**Email**</label>
+                                <input type="text" class="form-control mb-2" placeholder="Enter your E-mail" id="e-mail">
+                            </div>
+                            <!--send button-->
+                            <button type="submit" class="btn btn-pink text-uppercase mt-3">Sign up</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--end of contact section-->
+<!--footer-->
+<footer class="footer">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-8 mx-auto text-center">
+                <p class="mb-0 p-3 text-capitalize">All copyrights are released Team Dev 200</p>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--end of footer-->
+<!--jquery-->
+<script src="js/jquery-3.3.1.min.js"></script>
+<!--bootstrap js-->
+<script src="js/bootstrap.bundle.min.js"></script>
+<!--owl carousel js-->
+<script src="owlcarousel/js/owl.carousel.min.js"></script>
+<script src="owlcarousel/js/jquery.mousewheel.min.js"></script>
+<script>
+ $(document).ready(function(){
+  $('.owl-one').owlCarousel({
+      autoplay: true,
+      margin:10,
+      responsive:{
+          0:{
+              items:1
+          },
+          600:{
+              items:1
+          },
+          1000:{
+              items:1
+          }
+      }
+    });
+    $('.owl-carousel').owlCarousel({
+        autoplay: true,
+        autoplayHoverPause: true,
+        lazyLoad: true,
+        margin: 5,
+        stagePadding: 5,
+        responsive: {
+            0: {
+                items: 1,
+                dots: true
+            },
+            540: {
+                items: 2,
+                dots: true
+            },
+            720: {
+                items: 2,
+                dots: true
+            },
+            960: {
+                items: 3,
+                dots: true
+            },
+            1140: {
+                items: 3,
+                dots: true
+            }
+        }
+   });
+
+   $('.owl-carousel').on('mousewheel', '.owl-stage', function(e){
+        if(e.deltaY>0){
+            $('.owl-carousel').trigger('next.owl');
+        } else{
+            $('.owl-carousel').trigger('prev.owl');
+        }
+        e.preventDefault();
+   });
+
+});
+</script>
+<!--main js-->
+<script src="js/main.js"></script>
+<script src="js/store.js" async></script>
+</body>
+</html>

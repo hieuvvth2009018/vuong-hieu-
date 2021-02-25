@@ -1,0 +1,1265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="images/logo2.png">
+    <title>Cake Shop</title>
+    <!--bootstrap css-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!--main css-->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/test.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--font awesome-->
+    <script src="js/all.js"></script>
+    <script src="https://kit.fontawesome.com/f8199a7d4e.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+<!--header-->
+<header id="header">
+    <!--navbar-->
+    <nav class="navbar navbar-expand-lg mx-4">
+        <!--logo-->
+        <a href="index.html" class="navbar-brand">
+            <!--
+                https://www.iconfinder.com/icons/2138186/baker_bakery_cupcake_dessert_food_icon
+            -->
+            <img src="images/thecakeshop.png" alt="main icon" style="width:155px">
+        </a>
+        <!-- end of logo-->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
+            <span class="toggler-icon">
+                <i class="fas fa-bars"></i>
+            </span>
+        </button>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <!--menu-->
+            <ul class="navbar-nav text-capitalize mx-auto" id="menu">
+                <li class="nav-item active">
+                    <a href="index.html" class="nav-link">home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about-us.html" class="nav-link">aboutUs</a>
+                </li>
+                <li class="nav-item">
+                    <a href="all-product.html" class="nav-link">allProducts</a>
+                </li>
+                <li class="nav-item">
+                    <a href="order-form.html" class="nav-link">order</a>
+                </li>
+                <li class="nav-item">
+                    <a href="news.html" class="nav-link">news</a>
+                </li>
+                <li class="nav-item" id="sm-cart">
+                    <a href="#" class="nav-link" data-toggle="modal" data-target="#cart-modal">cart</a>
+                </li>
+            </ul>
+            <!--end of menu-->
+            <div class="nav-info-items d-none d-lg-flex">
+                <!--phone info-->
+                <div class="nav-info align-items-center d-flex justify-content-between mx-lg-5">
+                    <span class="nav-icon mx-lg-3">
+                    </span>
+                    <a href="sign-up.html">
+                        <button type="submit" class="btn btn-pink text-uppercase mt-3" style="margin: 10px">sign up
+                        </button>
+                    </a>
+                    <a href="sign-in.html">
+                        <button type="submit" class="btn btn-pink text-uppercase mt-3" style="margin: 10px">sign in
+                        </button>
+                    </a>
+                </div>
+                <!--end of phone info-->
+<!--                <div class="nav-info align-items-center d-flex justify-content-between mx-lg-1">-->
+<!--                    <div id="myNav" class="overlay">-->
+<!--                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>-->
+<!--                        <div class="overlay-content">-->
+<!--                            <a href="sign-in.html">Sign in</a>-->
+<!--                            <a href="sign-up.html">Sign up</a>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <a href="#"><i class="fas fa-user-circle" onclick="openNav()"-->
+<!--                                   style="font-size: 40px; color: hotpink"></i></a>-->
+<!--                </div>-->
+                <!--cart info-->
+                <button type="button" class="btn btn-pink align-items-center d-flex justify-content-between mx-lg-5"
+                        data-toggle="modal" data-target="#myModal">
+                        <span class="cart-info_icon mx-lg-3">
+                            <i class="fa fa-shopping-bag"></i>
+                        </span>
+                </button>
+
+                <!-- The Modal -->
+                <div class="modal fade" id="myModal">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <h4 class="modal-title d-flex justify-content-between" style="text-align: center;">
+                                    Shopping Cart Information</h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                                <div class="cart-row">
+                                    <span class="cart-item cart-header cart-column">Name</span>
+                                    <span class="cart-price cart-header cart-column">Price</span>
+                                    <span class="cart-quantity cart-header cart-column">Quantity</span>
+                                </div>
+                                <div class="cart-items">
+                                    <div class="cart-row">
+                                        <div class="cart-item cart-column">
+                                            <img src="images-cart/cupcake-1.jpg" alt="" class="img-fluid rounded-circle">
+                                            <input type="hidden" value="">
+                                            <span class="cart-item-title">Bla bla</span>
+                                        </div>
+                                        <span class="cart-price cart-column">$5</span>
+                                        <div class="cart-quantity cart-column">
+                                            <input class="cart-quantity-input" type="number" value="1">
+                                            <button class="btn btn-danger" type="button">Remove</button>
+                                        </div>
+                                    </div>
+                                    <div class="cart-row">
+                                        <div class="cart-item cart-column">
+                                            <img src="images-cart/cupcake-2.jpg" alt="" class="img-fluid rounded-circle">
+                                            <input type="hidden" value="">
+                                            <span class="cart-item-title">Alo alo</span>
+                                        </div>
+                                        <span class="cart-price cart-column">$5</span>
+                                        <div class="cart-quantity cart-column">
+                                            <input class="cart-quantity-input" type="number" value="1">
+                                            <button class="btn btn-danger" type="button">Remove</button>
+                                        </div>
+                                    </div>
+                                    <div class="cart-total">
+                                        <strong class="cart-total-title">Total:</strong>
+                                        <span class="cart-total-price">$10</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary close-footer" id="close">Close</button>
+                                <a href="cart.html"><button type="button" class="btn btn-primary order">Check out</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--end of cart info-->
+            </div>
+        </div>
+    </nav>
+    <!--end of navbar-->
+</header>
+<!--end of header-->
+<!--banner-->
+<section class="about-bcg">
+    <div class="container">
+        <div class="row">
+            <div class="col-10 mx-auto text-center">
+                <h3 class="text-capitalize mb-0"> welcome to our</h3>
+                <strong class="banner-title text-capitalize">The Cake Shop</strong>
+                <div class="service-hour">
+                    <p class="mb-0 text-capitalize text-muted">here you can see our news</p>
+                </div>
+                <div class="crumbs">
+                    <nav aria-level="breadcrumb" class="breadcrumb-items">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="index.html">home page</a></li>
+                            <li class="breadcrumb-item"><a href="news.html">news</a></li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--end of banner-->
+<!--blog section-->
+<main id="main" role="main">
+    <div id="shopify-section-blog-template" class="shopify-section">
+        <div id="section-blog-template" class="Section" data-section-id="blog-template"
+             data-section-type="article-list">
+            <div class="Blog">
+                <div class="Container">
+                    <div class="ArticleListWrapper">
+                        <div class="ArticleList ArticleList--withFeatured Grid Grid--m">
+                            <div class="Grid__Cell hidden-phone">
+                                <div class="FlexboxIeFix">
+                                    <div class="ImageHero ImageHero--small"
+                                         style="background: url(//cdn.shopify.com/s/files/1/0280/5366/7979/articles/theeverygirl-bamboo-7_1x1.jpg?v=1580316103)">
+                                        <div class="ImageHero__ImageWrapper">
+                                            <div class="ImageHero__Image Image--zoomOut Image--lazyLoaded"
+                                                 data-optimumx="1.4"
+                                                 data-bgset="//cdn.shopify.com/s/files/1/0280/5366/7979/articles/theeverygirl-bamboo-7_small_crop_center.jpg?v=1580316103 750w, //cdn.shopify.com/s/files/1/0280/5366/7979/articles/theeverygirl-bamboo-7_1000x.jpg?v=1580316103 1000w, //cdn.shopify.com/s/files/1/0280/5366/7979/articles/theeverygirl-bamboo-7_1500x.jpg?v=1580316103 1500w"
+                                                 style="background-image: url('images/headerBcg-02.jpg');">
+                                                <picture style="display: none;">
+                                                    <source data-srcset="//cdn.shopify.com/s/files/1/0280/5366/7979/articles/theeverygirl-bamboo-7_small_crop_center.jpg?v=1580316103 750w, //cdn.shopify.com/s/files/1/0280/5366/7979/articles/theeverygirl-bamboo-7_1000x.jpg?v=1580316103 1000w, //cdn.shopify.com/s/files/1/0280/5366/7979/articles/theeverygirl-bamboo-7_1500x.jpg?v=1580316103 1500w"
+                                                            sizes="1260px"
+                                                            srcset="//cdn.shopify.com/s/files/1/0280/5366/7979/articles/theeverygirl-bamboo-7_small_crop_center.jpg?v=1580316103 750w, //cdn.shopify.com/s/files/1/0280/5366/7979/articles/theeverygirl-bamboo-7_1000x.jpg?v=1580316103 1000w, //cdn.shopify.com/s/files/1/0280/5366/7979/articles/theeverygirl-bamboo-7_1500x.jpg?v=1580316103 1500w">
+                                                    <img alt="" class="lazyautosizes Image--lazyLoaded"
+                                                         data-sizes="auto" data-optimumx="1.4" data-parent-fit="cover"
+                                                         sizes="1260px"></picture>
+                                            </div>
+
+                                            <noscript>
+                                                <div class="ImageHero__Image"
+                                                     style="background-image: url(//cdn.shopify.com/s/files/1/0280/5366/7979/articles/theeverygirl-bamboo-7_1000x.jpg?v=1580316103)"></div>
+                                            </noscript>
+                                        </div>
+
+                                        <div class="ImageHero__TextContent">
+                                            <header class="SectionHeader"><h2
+                                                    class="SectionHeader__Heading Heading u-h1">
+                                                <a href="test.html">When Everyone is Talking About New Year’s Resolutions</a>
+                                            </h2>
+
+                                                <div class="SectionHeader__ButtonWrapper">
+                                                    <a href="test.html" class="Button Button--primary">Read more</a>
+                                                </div>
+                                            </header>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="Grid__Cell hidden-tablet-and-up">
+                                <article class="ArticleItem"><a
+                                        class="ArticleItem__ImageWrapper AspectRatio AspectRatio--withFallback"
+                                        style="background: url(//cdn.shopify.com/s/files/1/0280/5366/7979/articles/theeverygirl-bamboo-7_1x1.jpg?v=1580316103); padding-bottom: 58%; --aspect-ratio: 1.7"
+                                        href="/blogs/the-cakery/when-everyone-is-talking-about-new-year-s-resolutions">
+                                    <img class="ArticleItem__Image Image--lazyLoad Image--fadeIn"
+                                         data-src="//cdn.shopify.com/s/files/1/0280/5366/7979/articles/theeverygirl-bamboo-7_{width}x.jpg?v=1580316103"
+                                         data-widths="[200,400,600,700,800]" data-sizes="auto"
+                                         alt="When Everyone is Talking About New Year’s Resolutions">
+
+                                    <noscript>
+                                        <img class="ArticleItem__Image"
+                                             src="//cdn.shopify.com/s/files/1/0280/5366/7979/articles/theeverygirl-bamboo-7_600x.jpg?v=1580316103"
+                                             alt="When Everyone is Talking About New Year’s Resolutions">
+                                    </noscript>
+                                </a>
+                                    <div class="ArticleItem__Content"><h2 class="ArticleItem__Title Heading u-h2">
+                                        <a href="test.html">When Everyone is Talking About New Year’s Resolutions</a>
+                                    </h2>
+                                        <p class="ArticleItem__Excerpt">
+
+
+                                            How many goals you managed to achieve in 2018, and how many you failed? Were
+                                            the goals realistic and measurable? How many of them are still inco...</p>
+                                        <a href="test.html" class="ArticleItem__Link Link Link--underline">Read more</a></div>
+                                </article>
+                            </div>
+                            <div class="Grid__Cell 1/2--tablet 1/3--lap-and-up">
+                                <article class="ArticleItem"
+                                         style="visibility: inherit; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
+                                    <a class="ArticleItem__ImageWrapper AspectRatio AspectRatio--withFallback"
+                                       style="background: url(//cdn.shopify.com/s/files/1/0280/5366/7979/articles/coffee_5_1x1.jpg?v=1580315860); padding-bottom: 58%; --aspect-ratio: 1.7"
+                                       href="/blogs/the-cakery/the-drinks-that-fuel-us">
+                                        <img class="ArticleItem__Image Image--fadeIn lazyautosizes Image--lazyLoaded"
+                                             data-widths="[200,400]" data-sizes="auto" alt="The Drinks that Fuel Us"
+                                             data-srcset="//cdn.shopify.com/s/files/1/0280/5366/7979/articles/coffee_5_200x.jpg?v=1580315860 200w, //cdn.shopify.com/s/files/1/0280/5366/7979/articles/coffee_5_400x.jpg?v=1580315860 400w"
+                                             sizes="380px"
+                                             srcset="images/cupcake-1.jpg">
+
+                                        <noscript>
+                                            <img class="ArticleItem__Image"
+                                                 src="//cdn.shopify.com/s/files/1/0280/5366/7979/articles/coffee_5_600x.jpg?v=1580315860"
+                                                 alt="The Drinks that Fuel Us">
+                                        </noscript>
+                                    </a>
+                                    <div class="ArticleItem__Content"><h2 class="ArticleItem__Title Heading u-h2">
+                                        <a href="test.html">The Drinks that Fuel Us</a>
+                                    </h2>
+                                        <p class="ArticleItem__Excerpt">
+                                            Most people use coffee as fuel to feel alert and energized during the day.
+                                            Besides acting as an energy boost, it has become a luxury good, a
+                                            hobby...</p>
+                                        <a href="test.html" class="ArticleItem__Link Link Link--underline">Read more</a></div>
+                                </article>
+                            </div>
+                            <div class="Grid__Cell 1/2--tablet 1/3--lap-and-up">
+                                <article class="ArticleItem"
+                                         style="visibility: inherit; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
+                                    <a class="ArticleItem__ImageWrapper AspectRatio AspectRatio--withFallback"
+                                       style="background: url(//cdn.shopify.com/s/files/1/0280/5366/7979/articles/chestnut_banner_1x1.jpg?v=1580315682); padding-bottom: 58%; --aspect-ratio: 1.7"
+                                       href="/blogs/the-cakery/health-benefits-of-chestnut">
+                                        <img class="ArticleItem__Image Image--fadeIn lazyautosizes Image--lazyLoaded"
+                                             data-widths="[200,400,600,700,800,900,1000,1200]" data-sizes="auto"
+                                             alt="Health Benefits of Chestnut!"
+                                             data-srcset="//cdn.shopify.com/s/files/1/0280/5366/7979/articles/chestnut_banner_200x.jpg?v=1580315682 200w, //cdn.shopify.com/s/files/1/0280/5366/7979/articles/chestnut_banner_400x.jpg?v=1580315682 400w, //cdn.shopify.com/s/files/1/0280/5366/7979/articles/chestnut_banner_600x.jpg?v=1580315682 600w, //cdn.shopify.com/s/files/1/0280/5366/7979/articles/chestnut_banner_700x.jpg?v=1580315682 700w, //cdn.shopify.com/s/files/1/0280/5366/7979/articles/chestnut_banner_800x.jpg?v=1580315682 800w, //cdn.shopify.com/s/files/1/0280/5366/7979/articles/chestnut_banner_900x.jpg?v=1580315682 900w, //cdn.shopify.com/s/files/1/0280/5366/7979/articles/chestnut_banner_1000x.jpg?v=1580315682 1000w, //cdn.shopify.com/s/files/1/0280/5366/7979/articles/chestnut_banner_1200x.jpg?v=1580315682 1200w"
+                                             sizes="380px"
+                                             srcset="images/cupcake-2.jpg">
+
+                                        <noscript>
+                                            <img class="ArticleItem__Image"
+                                                 src="//cdn.shopify.com/s/files/1/0280/5366/7979/articles/chestnut_banner_600x.jpg?v=1580315682"
+                                                 alt="Health Benefits of Chestnut!">
+                                        </noscript>
+                                    </a>
+                                    <div class="ArticleItem__Content"><h2 class="ArticleItem__Title Heading u-h2">
+                                        <a href="/blogs/the-cakery/health-benefits-of-chestnut">Health Benefits of
+                                            Chestnut!</a>
+                                    </h2>
+                                        <p class="ArticleItem__Excerpt">
+
+
+                                            Roasted Chestnut is a popular healthy street food in Hong Kong, they are
+                                            particularly popular during winter. The hawker slow roasts the
+                                            chestnut...</p>
+                                        <a href="test.html" class="ArticleItem__Link Link Link--underline">Read more</a></div>
+                                </article>
+                            </div>
+                            <div class="Grid__Cell 1/2--tablet 1/3--lap-and-up">
+                                <article class="ArticleItem"
+                                         style="visibility: inherit; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
+                                    <a class="ArticleItem__ImageWrapper AspectRatio AspectRatio--withFallback"
+                                       style="background: url(//cdn.shopify.com/s/files/1/0280/5366/7979/articles/adventcalendar11_1x1.jpg?v=1580315498); padding-bottom: 58%; --aspect-ratio: 1.7"
+                                       href="/blogs/the-cakery/diy-advent-calendar-to-make-now-so-you-are-ready-for-december">
+                                        <img class="ArticleItem__Image Image--fadeIn lazyautosizes Image--lazyLoaded"
+                                             data-widths="[200,400,600]" data-sizes="auto"
+                                             alt="DIY Advent Calendar to Make Now So You are Ready For December"
+                                             data-srcset="//cdn.shopify.com/s/files/1/0280/5366/7979/articles/adventcalendar11_200x.jpg?v=1580315498 200w, //cdn.shopify.com/s/files/1/0280/5366/7979/articles/adventcalendar11_400x.jpg?v=1580315498 400w, //cdn.shopify.com/s/files/1/0280/5366/7979/articles/adventcalendar11_600x.jpg?v=1580315498 600w"
+                                             sizes="380px"
+                                             srcset="images/cupcake-3.jpg">
+
+                                        <noscript>
+                                            <img class="ArticleItem__Image"
+                                                 src="//cdn.shopify.com/s/files/1/0280/5366/7979/articles/adventcalendar11_600x.jpg?v=1580315498"
+                                                 alt="DIY Advent Calendar to Make Now So You are Ready For December">
+                                        </noscript>
+                                    </a>
+                                    <div class="ArticleItem__Content"><h2 class="ArticleItem__Title Heading u-h2">
+                                        <a href="test.html">DIY Advent Calendar to Make Now So You are Ready For December</a>
+                                    </h2>
+                                        <p class="ArticleItem__Excerpt">
+
+                                            It's time of the year again, everyone is starting to&nbsp;talk about
+                                            Christmas Parties, gifting ideas and Advent Calendars! No Christmas is
+                                            complete w...</p>
+                                        <a href="test.html" class="ArticleItem__Link Link Link--underline">Read more</a></div>
+                                </article>
+                            </div>
+                            <div class="Grid__Cell 1/2--tablet 1/3--lap-and-up">
+                                <article class="ArticleItem"
+                                         style="visibility: inherit; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
+                                    <a class="ArticleItem__ImageWrapper AspectRatio AspectRatio--withFallback"
+                                       style="background: url(//cdn.shopify.com/s/files/1/0280/5366/7979/articles/Cover_1x1.jpeg.jpg?v=1580315240); padding-bottom: 58%; --aspect-ratio: 1.7"
+                                       href="/blogs/the-cakery/have-a-greener-halloween-less-waste-more-fun">
+                                        <img class="ArticleItem__Image Image--fadeIn lazyautosizes Image--lazyLoaded"
+                                             data-widths="[200,400,600,700]" data-sizes="auto"
+                                             alt="Have a Greener Halloween, Less Waste More Fun!"
+                                             data-srcset="//cdn.shopify.com/s/files/1/0280/5366/7979/articles/Cover_200x.jpeg?v=1580315240 200w, //cdn.shopify.com/s/files/1/0280/5366/7979/articles/Cover_400x.jpeg?v=1580315240 400w, //cdn.shopify.com/s/files/1/0280/5366/7979/articles/Cover_600x.jpeg?v=1580315240 600w, //cdn.shopify.com/s/files/1/0280/5366/7979/articles/Cover_700x.jpeg?v=1580315240 700w"
+                                             sizes="380px"
+                                             srcset="images/cake-1.jpg">
+
+                                        <noscript>
+                                            <img class="ArticleItem__Image"
+                                                 src="//cdn.shopify.com/s/files/1/0280/5366/7979/articles/Cover_600x.jpeg?v=1580315240"
+                                                 alt="Have a Greener Halloween, Less Waste More Fun!">
+                                        </noscript>
+                                    </a>
+                                    <div class="ArticleItem__Content"><h2 class="ArticleItem__Title Heading u-h2">
+                                        <a href="test.html">Have a Greener Halloween, Less Waste More Fun!</a>
+                                    </h2>
+                                        <p class="ArticleItem__Excerpt">
+
+
+                                            Halloween is in 2 days! Some of you might have partied over the weekend
+                                            already. For those that are still in the planning stage, have you
+                                            though...</p>
+                                        <a href="test.html" class="ArticleItem__Link Link Link--underline">Read more</a></div>
+                                </article>
+                            </div>
+                            <div class="Grid__Cell 1/2--tablet 1/3--lap-and-up">
+                                <article class="ArticleItem"
+                                         style="visibility: inherit; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
+                                    <a class="ArticleItem__ImageWrapper AspectRatio AspectRatio--withFallback"
+                                       style="background: url(//cdn.shopify.com/s/files/1/0280/5366/7979/articles/5_Basics_to_Go_Plastic_Free_in_Hong_Kong_2_1x1.png.jpg?v=1580314913); padding-bottom: 58%; --aspect-ratio: 1.7"
+                                       href="/blogs/the-cakery/5-basics-to-go-plastic-free-in-hong-kong">
+                                        <img class="ArticleItem__Image Image--fadeIn lazyautosizes Image--lazyLoaded"
+                                             data-widths="[200,400,600,700]" data-sizes="auto"
+                                             alt="5 Basics to Go Plastic Free in Hong Kong"
+                                             data-srcset="//cdn.shopify.com/s/files/1/0280/5366/7979/articles/5_Basics_to_Go_Plastic_Free_in_Hong_Kong_2_200x.png?v=1580314913 200w, //cdn.shopify.com/s/files/1/0280/5366/7979/articles/5_Basics_to_Go_Plastic_Free_in_Hong_Kong_2_400x.png?v=1580314913 400w, //cdn.shopify.com/s/files/1/0280/5366/7979/articles/5_Basics_to_Go_Plastic_Free_in_Hong_Kong_2_600x.png?v=1580314913 600w, //cdn.shopify.com/s/files/1/0280/5366/7979/articles/5_Basics_to_Go_Plastic_Free_in_Hong_Kong_2_700x.png?v=1580314913 700w"
+                                             sizes="380px"
+                                             srcset="images/cake-2.jpg">
+
+                                        <noscript>
+                                            <img class="ArticleItem__Image"
+                                                 src="//cdn.shopify.com/s/files/1/0280/5366/7979/articles/5_Basics_to_Go_Plastic_Free_in_Hong_Kong_2_600x.png?v=1580314913"
+                                                 alt="5 Basics to Go Plastic Free in Hong Kong">
+                                        </noscript>
+                                    </a>
+                                    <div class="ArticleItem__Content"><h2 class="ArticleItem__Title Heading u-h2">
+                                        <a href="test.html">5 Basics to Go Plastic Free in Hong Kong</a>
+                                    </h2>
+                                        <p class="ArticleItem__Excerpt">
+
+
+                                            Plastic pollution has always been a problem Hong Kong is facing. Mangkhut
+                                            might have made some damages but it has also put the problem right...</p>
+                                        <a href="test.html" class="ArticleItem__Link Link Link--underline">Read more</a></div>
+                                </article>
+                            </div>
+                            <div class="Grid__Cell 1/2--tablet 1/3--lap-and-up">
+                                <article class="ArticleItem"
+                                         style="visibility: inherit; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
+                                    <a class="ArticleItem__ImageWrapper AspectRatio AspectRatio--withFallback"
+                                       style="background: url(//cdn.shopify.com/s/files/1/0280/5366/7979/articles/banner_1x1.jpg?v=1580314756); padding-bottom: 58%; --aspect-ratio: 1.7"
+                                       href="/blogs/the-cakery/5-videos-to-kick-start-the-mindful-lifestyle">
+                                        <img class="ArticleItem__Image Image--fadeIn lazyautosizes Image--lazyLoaded"
+                                             data-widths="[200,400,600]" data-sizes="auto"
+                                             alt="5 Videos to Kick-Start the Mindful Lifestyle"
+                                             data-srcset="//cdn.shopify.com/s/files/1/0280/5366/7979/articles/banner_200x.jpg?v=1580314756 200w, //cdn.shopify.com/s/files/1/0280/5366/7979/articles/banner_400x.jpg?v=1580314756 400w, //cdn.shopify.com/s/files/1/0280/5366/7979/articles/banner_600x.jpg?v=1580314756 600w"
+                                             sizes="380px"
+                                             srcset="images/cake-3.jpg">
+
+                                        <noscript>
+                                            <img class="ArticleItem__Image"
+                                                 src="//cdn.shopify.com/s/files/1/0280/5366/7979/articles/banner_600x.jpg?v=1580314756"
+                                                 alt="5 Videos to Kick-Start the Mindful Lifestyle">
+                                        </noscript>
+                                    </a>
+                                    <div class="ArticleItem__Content"><h2 class="ArticleItem__Title Heading u-h2">
+                                        <a href="test.html">5 Videos to Kick-Start the Mindful Lifestyle</a>
+                                    </h2>
+                                        <p class="ArticleItem__Excerpt">
+
+
+                                            More and more people are trying to eat healthy. &nbsp;Clean eating is a
+                                            trend that a lot of people is trying to adopt. People look from
+                                            magazines...</p>
+                                        <a href="test.html" class="ArticleItem__Link Link Link--underline">Read more</a></div>
+                                </article>
+                            </div>
+                            <div class="Grid__Cell 1/2--tablet 1/3--lap-and-up">
+                                <article class="ArticleItem"
+                                         style="visibility: inherit; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
+                                    <a class="ArticleItem__ImageWrapper AspectRatio AspectRatio--withFallback"
+                                       style="background: url(//cdn.shopify.com/s/files/1/0280/5366/7979/articles/salad_bowl_1x1.jpg?v=1580314145); padding-bottom: 58%; --aspect-ratio: 1.7"
+                                       href="/blogs/the-cakery/what-type-of-vegetarian-are-you">
+                                        <img class="ArticleItem__Image Image--fadeIn lazyautosizes Image--lazyLoaded"
+                                             data-widths="[200,400,600,700,800,900]" data-sizes="auto"
+                                             alt="What Type of Vegetarian Are You?"
+                                             data-srcset="//cdn.shopify.com/s/files/1/0280/5366/7979/articles/salad_bowl_200x.jpg?v=1580314145 200w, //cdn.shopify.com/s/files/1/0280/5366/7979/articles/salad_bowl_400x.jpg?v=1580314145 400w, //cdn.shopify.com/s/files/1/0280/5366/7979/articles/salad_bowl_600x.jpg?v=1580314145 600w, //cdn.shopify.com/s/files/1/0280/5366/7979/articles/salad_bowl_700x.jpg?v=1580314145 700w, //cdn.shopify.com/s/files/1/0280/5366/7979/articles/salad_bowl_800x.jpg?v=1580314145 800w, //cdn.shopify.com/s/files/1/0280/5366/7979/articles/salad_bowl_900x.jpg?v=1580314145 900w"
+                                             sizes="380px"
+                                             srcset="images/sweet-1.jpg">
+
+                                        <noscript>
+                                            <img class="ArticleItem__Image"
+                                                 src="//cdn.shopify.com/s/files/1/0280/5366/7979/articles/salad_bowl_600x.jpg?v=1580314145"
+                                                 alt="What Type of Vegetarian Are You?">
+                                        </noscript>
+                                    </a>
+                                    <div class="ArticleItem__Content"><h2 class="ArticleItem__Title Heading u-h2">
+                                        <a href="test.html">What Type of Vegetarian Are You?</a>
+                                    </h2>
+                                        <p class="ArticleItem__Excerpt">
+
+
+                                            Believe it or not – &nbsp;becoming a vegetarian is way easier than you
+                                            think.&nbsp;
+                                            People choose to be a vegetarian for reasons ranging from hea...</p>
+                                        <a href="test.html" class="ArticleItem__Link Link Link--underline">Read more</a></div>
+                                </article>
+                            </div>
+                            <div class="Grid__Cell 1/2--tablet 1/3--lap-and-up">
+                                <article class="ArticleItem"
+                                         style="visibility: inherit; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
+                                    <a class="ArticleItem__ImageWrapper AspectRatio AspectRatio--withFallback"
+                                       style="background: url(//cdn.shopify.com/s/files/1/0280/5366/7979/articles/web1_1x1.jpg?v=1577435370); padding-bottom: 58%; --aspect-ratio: 1.7"
+                                       href="/blogs/the-cakery/the-beginning-of-conscious-living">
+                                        <img class="ArticleItem__Image Image--fadeIn lazyautosizes Image--lazyLoaded"
+                                             data-widths="[200,400,600,700]" data-sizes="auto"
+                                             alt="The Beginning of Conscious Living"
+                                             data-srcset="//cdn.shopify.com/s/files/1/0280/5366/7979/articles/web1_200x.jpg?v=1577435370 200w, //cdn.shopify.com/s/files/1/0280/5366/7979/articles/web1_400x.jpg?v=1577435370 400w, //cdn.shopify.com/s/files/1/0280/5366/7979/articles/web1_600x.jpg?v=1577435370 600w, //cdn.shopify.com/s/files/1/0280/5366/7979/articles/web1_700x.jpg?v=1577435370 700w"
+                                             sizes="380px"
+                                             srcset="images/sweet-2.jpg">
+
+                                        <noscript>
+                                            <img class="ArticleItem__Image"
+                                                 src="//cdn.shopify.com/s/files/1/0280/5366/7979/articles/web1_600x.jpg?v=1577435370"
+                                                 alt="The Beginning of Conscious Living">
+                                        </noscript>
+                                    </a>
+                                    <div class="ArticleItem__Content"><h2 class="ArticleItem__Title Heading u-h2">
+                                        <a href="test.html">The Beginning of Conscious Living</a>
+                                    </h2>
+                                        <p class="ArticleItem__Excerpt">
+                                            April 2016 was when I first launched The Cakery. Over the past two and a
+                                            half years, I've witnessed a growing health-conscious community in Hong
+                                            K...</p>
+                                        <a href="test.html" class="ArticleItem__Link Link Link--underline">Read more</a></div>
+                                </article>
+                            </div>
+                            <div class="Grid__Cell 1/2--tablet 1/3--lap-and-up">
+                                <article class="ArticleItem"
+                                         style="visibility: inherit; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
+                                    <a class="ArticleItem__ImageWrapper AspectRatio AspectRatio--withFallback"
+                                       style="background: url(//cdn.shopify.com/s/files/1/0280/5366/7979/articles/The_Cakery_-_My_Vegan_Journey_by_Charlotte_In_White_1_web2_1x1.jpg?v=1580312800); padding-bottom: 58%; --aspect-ratio: 1.7"
+                                       href="/blogs/the-cakery/my-vegan-journey-by-charlotte-in-white">
+                                        <img class="ArticleItem__Image Image--fadeIn lazyautosizes Image--lazyLoaded"
+                                             data-widths="[200,400,600,700,800,900,1000,1200]" data-sizes="auto"
+                                             alt="My Vegan Journey by Charlotte In White"
+                                             data-srcset="//cdn.shopify.com/s/files/1/0280/5366/7979/articles/The_Cakery_-_My_Vegan_Journey_by_Charlotte_In_White_1_web2_200x.jpg?v=1580312800 200w, //cdn.shopify.com/s/files/1/0280/5366/7979/articles/The_Cakery_-_My_Vegan_Journey_by_Charlotte_In_White_1_web2_400x.jpg?v=1580312800 400w, //cdn.shopify.com/s/files/1/0280/5366/7979/articles/The_Cakery_-_My_Vegan_Journey_by_Charlotte_In_White_1_web2_600x.jpg?v=1580312800 600w, //cdn.shopify.com/s/files/1/0280/5366/7979/articles/The_Cakery_-_My_Vegan_Journey_by_Charlotte_In_White_1_web2_700x.jpg?v=1580312800 700w, //cdn.shopify.com/s/files/1/0280/5366/7979/articles/The_Cakery_-_My_Vegan_Journey_by_Charlotte_In_White_1_web2_800x.jpg?v=1580312800 800w, //cdn.shopify.com/s/files/1/0280/5366/7979/articles/The_Cakery_-_My_Vegan_Journey_by_Charlotte_In_White_1_web2_900x.jpg?v=1580312800 900w, //cdn.shopify.com/s/files/1/0280/5366/7979/articles/The_Cakery_-_My_Vegan_Journey_by_Charlotte_In_White_1_web2_1000x.jpg?v=1580312800 1000w, //cdn.shopify.com/s/files/1/0280/5366/7979/articles/The_Cakery_-_My_Vegan_Journey_by_Charlotte_In_White_1_web2_1200x.jpg?v=1580312800 1200w"
+                                             sizes="380px"
+                                             srcset="images/sweet-3.jpg">
+
+                                        <noscript>
+                                            <img class="ArticleItem__Image"
+                                                 src="//cdn.shopify.com/s/files/1/0280/5366/7979/articles/The_Cakery_-_My_Vegan_Journey_by_Charlotte_In_White_1_web2_600x.jpg?v=1580312800"
+                                                 alt="My Vegan Journey by Charlotte In White">
+                                        </noscript>
+                                    </a>
+                                    <div class="ArticleItem__Content"><h2 class="ArticleItem__Title Heading u-h2">
+                                        <a href="test.html">My Vegan Journey by Charlotte In White</a>
+                                    </h2>
+                                        <p class="ArticleItem__Excerpt">
+
+
+                                            Sometimes a simple decision can change your life forever.
+                                            I became a vegetarian (and later, vegan) four years ago. Even when it was
+                                            testing ...</p>
+                                        <a href="test.html" class="ArticleItem__Link Link Link--underline">Read more</a></div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <style>
+            #section-blog-template .ImageHero,
+            #section-blog-template .ImageHero .Heading {
+                color: #ffffff;
+            }
+
+            #section-blog-template .ImageHero .Button {
+                color: #1c1c1c;
+                border-color: #ffffff;
+            }
+
+            #section-blog-template .ImageHero .Button::before {
+                background-color: #ffffff;
+            }
+
+            @media (-moz-touch-enabled: 0), (hover: hover) {
+                #section-blog-template .ImageHero .Button:hover {
+                    color: #ffffff;
+                }
+            }</style>
+
+    </div>
+    <div id="shopify-section-shop-now" class="shopify-section"></div>
+    <script type="text/javascript">
+        ;(function () {
+            window.Station = window.Station || {};
+            window.Station.Apps = window.Station.Apps || {};
+            window.Station.Apps.Tabs = {
+                version: '3.4.0',
+                order: [],
+                settings: {
+                    "dev_mode": false,
+                    "product_autosplit": true,
+                    "product_autosplit_heading": "h4",
+                    "product_description_tab": true,
+                    "product_description_tab_title": "Description",
+                    "force_full": false,
+                    "force_wrap": false,
+                    "full_open": false,
+                    "full_single_active": true,
+                    "clean_content": null,
+                    "deep_links": true,
+                    "clean_content_level": "basic_tags",
+                    "autostop_enabled": false,
+                    "autostop_heading": "h6",
+                    "autostop_heading_show": true
+                },
+                template: 'blog',
+                events: {},
+                on: function (e, cb) {
+                    if (e === 'ready' && this.isReady) return cb.call(this);
+                    var callbacks = this.events[e] || [];
+                    callbacks.push(cb);
+                    this.events[e] = callbacks;
+                }
+            };
+            var s = window.Station.Apps.Tabs.settings;
+            s.clean_content_nodes = ['div', 'span', 'section', 'article'];
+            s.fix_known_issues = true;
+            s.show_content_after = false;
+        })();
+        !function () {
+            var L = "station-tabs", d = "mod-full-width", a = "mod-hide-focus", f = "is-active", o = "aria-selected",
+                p = "aria-hidden", s = "aria-labelledby", l = "tabindex", S = L + "-link", q = L + "-content",
+                E = L + "-content-inner", c = "data-" + L + "-app", u = "." + L + "-data-item", B = "role", h = "false",
+                g = "true", I = window.Station.Apps.Tabs, x = I.settings, N = I.order, t = null, v = null;
+            I.trigger = function (e, t) {
+                var n = this.events[e];
+                !n || n.length < 1 || n.forEach(function (e) {
+                    e.call(I, t)
+                })
+            };
+
+            function n() {
+                return window.innerWidth || document.documentElement.clientWidth || document.getElementsByTagName("body")[0].clientWidth
+            }
+
+            function m(e, t) {
+                if (e) for (var n = e, i = 0; i < n.length; i++) n[i].style.height = t || n[i].scrollHeight + "px"
+            }
+
+            function b(e) {
+                e = e || {};
+                for (var t = 1; t < arguments.length; t++) if (arguments[t]) for (var n in arguments[t]) arguments[t].hasOwnProperty(n) && (e[n] = arguments[t][n]);
+                return e
+            }
+
+            function T(e) {
+                for (var t = e.parentNode; e.firstChild;) t.insertBefore(e.firstChild, e);
+                t.removeChild(e)
+            }
+
+            function z(e) {
+                var t = "àáâäæãåāăąçćčđďèéêëēėęěğǵḧîïíīįìłḿñńǹňôöòóœøōõṕŕřßśšşșťțûüùúūǘůűųẃẍÿýžźż·/_,:;",
+                    n = new RegExp(t.split("").join("|"), "g");
+                return e.toString().toLowerCase().replace(/\s+/g, "-").replace(n, function (e) {
+                    return "aaaaaaaaaacccddeeeeeeeegghiiiiiilmnnnnooooooooprrsssssttuuuuuuuuuwxyyzzz------".charAt(t.indexOf(e))
+                }).replace(/&/g, "").replace(/[^\w\-]+/g, "").replace(/\-\-+/g, "-").replace(/^-+/, "").replace(/-+$/, "")
+            }
+
+            function F(e, t, n) {
+                return (e || "tab-" + (t + 1)) + "_" + n + "-" + t
+            }
+
+            function y(e) {
+                var t = e.lastIndexOf("_"), n = e.substring(0, t), i = e.substring(t + 1).split("-"),
+                    r = 0 < parseInt(i[0], 10) ? "_" + i[0] : "";
+                return {vanityId: n, scope: parseInt(i[0], 10), index: parseInt(i[1], 10), suffix: r}
+            }
+
+            function H(e) {
+                var t = document.createElement("div");
+                return t.className = q, t.innerHTML = '<div class="' + E + '"></div>', e && (t.id = e, t.setAttribute(s, "st-link-" + e)), t
+            }
+
+            function _(e, t) {
+                for (var n = e.length - 1; 0 <= n; n--) e[n].setAttribute(l, "-1"), e[n].setAttribute(o, h);
+                t.setAttribute(l, "0"), t.setAttribute(o, g)
+            }
+
+            function w(e, t, n) {
+                if (e && t) {
+                    for (var i = e.length - 1; 0 <= i; i--) "st-link-" + n !== e[i].id && e[i].classList.remove(f);
+                    for (i = t.length - 1; 0 <= i; i--) "st-" + n !== t[i].id && (t[i].classList.remove(f), t[i].setAttribute(p, g))
+                }
+            }
+
+            function A(n, i) {
+                cancelAnimationFrame(v), v = requestAnimationFrame(function e() {
+                    var t = i.getBoundingClientRect().top - n;
+                    t < 0 && window.scrollBy(null, t), v = requestAnimationFrame(e)
+                })
+            }
+
+            function k(e, t, n, i) {
+                if (n) {
+                    var r = b({animate: !0, deepLink: !0}, i), a = n.getAttribute("href").substr(1),
+                        o = e.querySelector("#st-" + a);
+                    if (o) {
+                        var s = e.classList.contains(d), l = e.querySelectorAll("." + S + "." + f),
+                            c = e.querySelectorAll("." + q + "." + f);
+                        if (r.scrollIntoView && n.scrollIntoView({
+                            behavior: "smooth",
+                            block: "center"
+                        }), n.classList.contains(f)) s && !r.preventClose ? (r.animate && m([o]), setTimeout(function () {
+                            w([n], [o])
+                        }, 20), history.replaceState(null, null, window.location.pathname + window.location.search)) : w(l, c, a); else {
+                            if (s ? x.full_single_active && (r.animate && (m(c), r.scrollIntoView || (A(n.getBoundingClientRect().top, n), setTimeout(function () {
+                                cancelAnimationFrame(v)
+                            }, 400))), w(l, c)) : w(l, c), _(t, n), !x.force_wrap && r.animate && s && m([o]), n.classList.add(f), o.classList.add(f), o.setAttribute(p, g), r.deepLink && x.deep_links) {
+                                var u = y(a);
+                                history.replaceState(null, null, "#" + u.vanityId + u.suffix)
+                            }
+                            r.skipCallback || I.trigger("open", {instance: e, link: n, content: o})
+                        }
+                    }
+                }
+            }
+
+            function C(e, t, n, i) {
+                if (t.length) {
+                    var r = e.id === L + "-0" ? "_" : "-", a = window.location.hash.substr(1),
+                        o = a ? e.querySelector("." + S + '[href^="#' + a + r + '"]') : null;
+                    !o && i || k(e, t, o || t[0], {deepLink: !1, animate: !1, skipCallback: !0})
+                }
+            }
+
+            function R(e, t, n, i, r) {
+                if (t) {
+                    var a = e.querySelectorAll("." + S), o = t.querySelector("." + S), s = t.querySelector("." + q),
+                        l = o.cloneNode(!0), c = s.cloneNode(!0);
+                    l.id = "st-link-" + F(o.id.substr(8), n, i), l.href = "#" + F(o.getAttribute("href").substr(1), n, i), c.id = "st-" + F(s.id.substr(3), n, i);
+                    var u = a[r - 1];
+                    r && u ? (e.insertBefore(l, u), e.insertBefore(c, u)) : (e.appendChild(l), e.appendChild(c))
+                }
+            }
+
+            function O(e, t) {
+                var n = document.createElement("div"), l = t, i = e.getAttribute("data-tabs-type"), r = [],
+                    a = x.autostop_enabled ? e.querySelector(x.autostop_heading + ":last-of-type") : null;
+                n.id = L + "-" + l, n.className = L + " is-loading";
+                var o = x.clean_content_level;
+                if ("no_attrs" === o) for (var s = e.querySelectorAll("div,span"), c = s.length - 1; 0 <= c; c--) s[c].attributes.length || T(s[c]); else if (o) {
+                    var u = [];
+                    x.product_autosplit && "general" !== i && u.push(x.product_autosplit_heading), a && u.push(x.autostop_heading), M(e, u, "basic_tags" === o ? x.clean_content_nodes : null)
+                }
+
+                function d(e, t, n) {
+                    var i = F(z(t), n, l);
+                    e.querySelector("." + q).id = "st-" + i;
+                    var r, a, o,
+                        s = (r = t, a = i, (o = document.createElement("a")).href = "#" + a, o.id = "st-link-" + a, o.className = S, o.innerHTML = "<span>" + r + "</span>", o);
+                    e.insertBefore(s, e.firstChild)
+                }
+
+                var f = r.length, p = e.childNodes, h = p.length - 1;
+                if (a) for (c = h; 0 <= c; c--) if (p[c] === a) {
+                    h = c - 1;
+                    break
+                }
+                if (x.product_autosplit) for (c = h; 0 <= c; c--) {
+                    var g = p[c];
+                    if (g.nodeName === x.product_autosplit_heading.toUpperCase()) g.textContent.trim().length && r.push(g)
+                }
+                if (x.product_description_tab && "product" === I.template && r.push(x.product_description_tab_title || "Description"), r.length && (!i || "specific" === i)) {
+                    n.insertBefore(H(), n.firstChild);
+                    for (c = h; 0 <= c; c--) {
+                        var v = p[c];
+                        if (v === r[0]) {
+                            if (r.shift(), d(n, v.textContent.trim(), r.length), v.parentNode.removeChild(v), !r.length) break;
+                            n.insertBefore(H(), n.firstChild)
+                        } else {
+                            var m = n.querySelector("." + E);
+                            m.insertBefore(v, m.firstChild)
+                        }
+                    }
+                    "string" == typeof r[0] && d(n, r[0], 0)
+                }
+                if (n.setAttribute(B, "tablist"), a ? (e.insertBefore(n, a), x.autostop_heading_show || e.removeChild(a)) : e.appendChild(n), !i || "general" === i) {
+                    var b = {}, y = [], _ = f;
+                    for (c = 0; c < N.length; c++) {
+                        var w = N[c], A = document.getElementById(L + "-data-" + w);
+                        if (A) {
+                            var k = parseInt(A.getAttribute("data-position"), 10);
+                            0 < k && !b[k] ? (b[k] = A, y.push(k)) : (R(n, A, _, l), _++)
+                        }
+                    }
+                    y.sort(function (e, t) {
+                        return e - t
+                    });
+                    for (c = 0; c < y.length; c++) R(n, b[y[c]], _, l, y[c]), _++
+                }
+                if (x.show_content_after) {
+                    var C = document.getElementById("station-tabs-content-after");
+                    C && (e.appendChild(C), C.style.display = "block")
+                }
+                return n
+            }
+
+            function P(e, t, n, i, r) {
+                var a = r.which;
+                if (-1 !== [13, 32, 35, 36, 37, 38, 39, 40].indexOf(a)) {
+                    var o, s;
+                    r.preventDefault(), r.stopPropagation();
+                    for (var l = t[0], c = t[t.length - 1], u = t.length - 1; 0 <= u; u--) if (t[u].id === i.id) {
+                        o = t[u + 1], s = t[u - 1];
+                        break
+                    }
+                    switch (a) {
+                        case 37:
+                        case 38:
+                            s ? s.focus() : c.focus();
+                            break;
+                        case 39:
+                        case 40:
+                            o ? o.focus() : l.focus();
+                            break;
+                        case 36:
+                            l.focus();
+                            break;
+                        case 35:
+                            c.focus();
+                            break;
+                        case 13:
+                        case 32:
+                            k(e, t, i)
+                    }
+                }
+            }
+
+            function D(n) {
+                for (var t = n.querySelectorAll("." + S), e = n.querySelectorAll("." + q), i = t.length - 1; 0 <= i; i--) {
+                    var r = t[i].getAttribute("href").substr(1);
+                    t[i].setAttribute(B, "tab"), t[i].setAttribute("aria-controls", "st-" + r), t[i].setAttribute(o, h), t[i].setAttribute(l, "-1"), t[i].addEventListener("click", function (e) {
+                        e.preventDefault(), e.stopPropagation(), k(n, t, this), n.classList.contains(a) || n.classList.add(a)
+                    }), t[i].addEventListener("keydown", function (e) {
+                        P(n, t, 0, this, e)
+                    }), t[i].addEventListener("focus", function (e) {
+                        n.classList.remove(a), _(t, this)
+                    })
+                }
+                for (i = e.length - 1; 0 <= i; i--) e[i].setAttribute(B, "tabpanel"), e[i].setAttribute(s, e[i].id.substr(0, 3) + "link-" + e[i].id.substr(3)), e[i].setAttribute(p, g), e[i].addEventListener("transitionend", function (e) {
+                    this.style.removeProperty("height"), cancelAnimationFrame(v);
+                    var t = document.getElementById(this.id.substring(0, 3) + "link-" + this.id.substring(3));
+                    I.trigger("transitionEnd", {instance: n, link: t, content: this})
+                });
+                return {i: n, l: t, p: e}
+            }
+
+            function W(e, t, n) {
+                if (t.length) {
+                    var i = document.querySelectorAll("." + S + "." + f);
+                    e.classList.remove(d);
+                    var r = t[0].offsetHeight / 2, a = t[0].getBoundingClientRect();
+                    if (t[t.length - 1].getBoundingClientRect().top - a.top > r) {
+                        e.classList.add(d), w(t, n);
+                        for (var o = 0; o < i.length; o++) k(e, t, i[o], {deepLink: !1, animate: !1, skipCallback: !0});
+                        return !0
+                    }
+                    return C(e, t), !1
+                }
+            }
+
+            var i = n(), M = function (e, t, n) {
+                if (e.hasAttribute(c) && t.length) for (var i = e.querySelectorAll(t.join(",")), r = i.length - 1; 0 <= r; r--) {
+                    var a = i[r].parentNode, o = (a.nodeName || "").toLowerCase();
+                    if (!a.hasAttribute(c) && (!n || -1 !== n.indexOf(o))) {
+                        T(a), M(e, t, n);
+                        break
+                    }
+                }
+            };
+            I.init = function () {
+                var e = document.querySelectorAll("div[" + c + "]");
+                if (e.length && "classList" in e[0]) {
+                    tabsets = [];
+                    for (var t = 0; t < e.length; t++) if (!e[t].classList.contains("is-initialized")) {
+                        e[t].classList.add("is-initialized");
+                        var n = O(e[t], t), i = D(n);
+                        tabsets.push(i)
+                    }
+                    if (!this.settings.keepSourceData) for (var r = document.getElementsByClassName(u.slice(1)); 0 < r.length;) r[0].parentNode.removeChild(r[0]);
+                    setTimeout(function () {
+                        for (var e = 0; e < tabsets.length; e++) t = tabsets[e], x.force_full && t.i.classList.add(d), x.force_full || x.force_wrap ? C(t.i, t.l, t.p, !x.full_open && !x.force_wrap) : (C(t.i, t.l, t.p, !x.full_open), W(t.i, t.l, t.p)), tabsets[e].i.classList.remove("is-loading"), tabsets[e].i.classList.add("is-ready");
+                        var t;
+                        I.autoFixes = {
+                            brooklyn: function () {
+                                var e = document.createElement("style"), t = ".product-single__meta", n = "!important;";
+                                e.innerHTML = t + " {position: relative " + n + " left: auto " + n + " top: auto " + n + "}" + t + "--wrapper > div:last-child:empty {display: none " + n + "}", document.head.appendChild(e)
+                            }, prestige: function () {
+                                window.theme && (window.theme.enableExperimentalResizeObserver = !0, I.on("transitionEnd", function (e) {
+                                    var t = ".Product__", n = document.querySelector(t + "Wrapper"),
+                                        i = document.querySelector(t + "Info");
+                                    n.style.minHeight = i.offsetHeight + "px"
+                                }))
+                            }
+                        };
+                        var n = ((window.Shopify || {}).theme || {}).theme_store_id;
+                        if (x.fix_known_issues && n) {
+                            var i = {730: "brooklyn", 855: "prestige"}[n.toString()];
+                            i && I.autoFixes[i]()
+                        }
+                        I.isReady = !0, I.trigger("ready")
+                    }, 0)
+                }
+            }, I.init(), window.addEventListener("resize", function (e) {
+                t && clearTimeout(t), t = setTimeout(function () {
+                    i !== n() && (function () {
+                        for (var e = document.querySelectorAll("." + L), t = 0; t < e.length; t++) for (var n = e[t].querySelectorAll("." + S), i = e[t].querySelectorAll("." + q), r = 0; r < i.length; r++) i[r].style.removeProperty("height"), x.force_full || x.force_wrap || W(e[t], n, i)
+                    }(), i = n())
+                }, 300)
+            }, !1), I.open = function (e, t) {
+                var n = "Tab with ID " + e + " is not found.", i = e.replace(/^#/, ""), r = y(i),
+                    a = document.getElementById("station-tabs-" + r.scope);
+                if (!a) return console.warn(n), !1;
+                var o = a.querySelectorAll(".station-tabs"), s = document.getElementById("st-link-" + i),
+                    l = document.getElementById("st-" + i);
+                return s && l ? (k(a, o, s, b({preventClose: !0}, t || {})), {
+                    instance: a,
+                    link: s,
+                    content: l
+                }) : (console.warn(n), !1)
+            }, I.openByTitle = function (e, t) {
+                for (var n = z(e), i = document.querySelectorAll('[id^="st-link-' + n + '_"]'), r = null, a = 0; a < i.length; a++) {
+                    var o = i[a].getAttribute("href").substr(1);
+                    if (y(o).vanityId === n) {
+                        r = o;
+                        break
+                    }
+                }
+                return r ? I.open(r, t) : (console.warn("Could not find tab with title: " + e), !1)
+            }
+        }();
+    </script>
+
+    <style>
+        div[data-station-tabs-app] {
+            clear: both
+        }
+
+        .station-tabs {
+            border-color: currentColor;
+            border-style: solid !important;
+            border-width: 0;
+            clear: both;
+            display: -webkit-box;
+            display: flex;
+            flex-wrap: wrap;
+            margin: 1em 0
+        }
+
+        .station-tabs:first-child {
+            margin-top: 0
+        }
+
+        .station-tabs:last-child {
+            margin-bottom: 0
+        }
+
+        .station-tabs:empty {
+            display: none
+        }
+
+        .station-tabs.mod-hide-focus .station-tabs-link:focus {
+            outline: 0
+        }
+
+        .station-tabs .station-tabs-link {
+            border-color: currentColor;
+            border-style: solid !important;
+            border-width: 0;
+            box-sizing: border-box;
+            display: inline-block;
+            position: relative;
+            text-decoration: none !important;
+            white-space: nowrap;
+            width: initial;
+            z-index: 1
+        }
+
+        .station-tabs .station-tabs-link:hover, .station-tabs .station-tabs-link:active {
+            outline: 0
+        }
+
+        .station-tabs .station-tabs-link:hover, .station-tabs .station-tabs-link:focus {
+            opacity: 1
+        }
+
+        .station-tabs .station-tabs-link.is-active {
+            color: inherit
+        }
+
+        .station-tabs .station-tabs-link:after {
+            border-width: 0 !important
+        }
+
+        .station-tabs .station-tabs-link:first-child.is-active + .station-tabs-content {
+            border-top-left-radius: 0
+        }
+
+        .station-tabs .station-tabs-link span {
+            color: inherit !important
+        }
+
+        .station-tabs .station-tabs-content {
+            box-sizing: border-box;
+            height: 0;
+            -webkit-box-ordinal-group: 2;
+            order: 1;
+            overflow: hidden;
+            width: 100%
+        }
+
+        .station-tabs .station-tabs-content:not(.is-active) {
+            height: 0 !important
+        }
+
+        .station-tabs .station-tabs-content.is-active {
+            height: auto
+        }
+
+        .station-tabs .station-tabs-content iframe, .station-tabs .station-tabs-content img, .station-tabs .station-tabs-content video {
+            max-width: 100%
+        }
+
+        .station-tabs .station-tabs-content img {
+            height: auto
+        }
+
+        .station-tabs .station-tabs-content iframe {
+            border-width: 0
+        }
+
+        .station-tabs .station-tabs-content-inner {
+            border-color: currentColor;
+            border-style: solid !important;
+            border-width: 0;
+            box-sizing: border-box;
+            width: 100%
+        }
+
+        .station-tabs .station-tabs-content-inner ul, .station-tabs .station-tabs-content-inner ol {
+            padding: 0 !important;
+            margin-left: 3em !important
+        }
+
+        .station-tabs .station-tabs-content-inner ul li {
+            list-style: disc !important
+        }
+
+        .station-tabs .station-tabs-content-inner ul li ul li {
+            list-style: circle !important
+        }
+
+        .station-tabs .station-tabs-content-inner ol li {
+            list-style: decimal !important
+        }
+
+        .station-tabs .station-tabs-content-inner > p:last-child, .station-tabs .station-tabs-content-inner > ol:last-child, .station-tabs .station-tabs-content-inner > ul:last-child {
+            margin-bottom: 0
+        }
+
+        .station-tabs .station-tabs-content-inner:before, .station-tabs .station-tabs-content-inner:after {
+            content: '';
+            display: table
+        }
+
+        .station-tabs .station-tabs-content-inner:after {
+            clear: both
+        }
+
+        .station-tabs.mod-full-width {
+            display: block
+        }
+
+        .station-tabs.mod-full-width:empty {
+            display: none
+        }
+
+        .station-tabs.mod-full-width .station-tabs-link {
+            display: block;
+            white-space: normal;
+            width: auto
+        }
+
+        .station-tabs.mod-full-width .station-tabs-content {
+            -webkit-transition: height 300ms;
+            transition: height 300ms
+        }
+
+        .station-tabs.mod-full-width .station-tabs-content:last-child .station-tabs-content-inner {
+            margin-bottom: 0;
+            padding-bottom: 0
+        }
+
+        .station-tabs.mod-full-width .station-tabs-link {
+            -webkit-box-align: center;
+            align-items: center;
+            display: -webkit-box;
+            display: flex;
+            -webkit-box-pack: justify;
+            justify-content: space-between
+        }
+
+        .station-tabs.mod-full-width .station-tabs-link span {
+            -webkit-box-flex: 1;
+            flex-grow: 1
+        }
+
+        .station-tabs.mod-full-width .station-tabs-link:after {
+            border-color: currentColor;
+            content: '';
+            display: block;
+            flex-shrink: 0;
+            font-weight: normal;
+            margin-left: 20px;
+            position: static !important;
+            width: auto !important;
+            border-bottom: 1px solid !important;
+            border-right: 1px solid !important;
+            margin-right: 3px;
+            margin-top: -3px;
+            -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+            height: 6px !important;
+            width: 6px !important
+        }
+
+        .station-tabs.mod-full-width .station-tabs-link.is-active:after {
+            margin-top: 3px;
+            -webkit-transform: rotate(-135deg);
+            transform: rotate(-135deg)
+        }
+
+        .station-tabs.mod-full-width.mod-ie9 .station-tabs-link:after {
+            float: right
+        }
+
+        .station-tabs .station-tabs-link.is-active {
+            font-weight: 600 !important;
+        }
+
+        .station-tabs .station-tabs-link {
+            border-width: 0 0 2px !important;
+            padding: 0 0 6px !important;
+            margin: 0 26px 14px 0 !important;
+        }
+
+        .station-tabs.mod-full-width .station-tabs-link {
+            padding: 14px 0 !important;
+            margin: 0 !important;
+        }
+
+        .station-tabs .station-tabs-content-inner {
+            margin: 12px 0 0 !important;
+        }
+
+        .station-tabs.mod-full-width .station-tabs-content-inner {
+            margin: 24px 0 10px !important;
+        }
+    </style>
+
+</main>
+<!--end of blog section-->
+<!--contact section-->
+<section class="map py-2">
+    <div class="container">
+        <div class="row">
+            <!--section title-->
+            <div class="col-10 mx-auto d-flex justify-content-center align-items-center">
+                <h1 class="text-capitalize"> contact <strong class="banner-title"> us </strong></h1>
+            </div>
+            <!--end of section title-->
+        </div>
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <!--google map-->
+                <div class="map">
+                    <iframe class="embed-responsive-item"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.0966890657864!2d105.78009371540224!3d21.028816893151134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313455f9bdf0e1c7%3A0x26caee8e7662dd9b!2zRlBUIEFwdGVjaCBIw6AgTuG7mWk!5e0!3m2!1svi!2s!4v1610006568174!5m2!1svi!2s"
+                            width="1150" height="450" frameborder="0" style="border:0;" allowfullscreen=""
+                            aria-hidden="false" tabindex="0"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="contact py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-12 px-4 py-3">
+                <h4 class="text-capitalize text-pink px-4">contact form</h4>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="form">
+                            <!--name-->
+                            <div class="form-group mb-0">
+                                <input type="text" class="form-control mb-2" placeholder="Enter your Name" id="name">
+                            </div>
+                            <!--email-->
+                            <div class="form-group mb-0">
+                                <input type="text" class="form-control mb-2" placeholder="Enter your E-mail" id="email">
+                            </div>
+                            <!--message-->
+                            <div class="form-group mb-0">
+                                <textarea name="message" class="form-control mb-2" placeholder="Your Message"
+                                          id="message" rows="2"></textarea>
+                            </div>
+                            <!--send button-->
+                            <button type="submit" class="btn btn-pink btn-block text-uppercase">send</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 px-4 py-3">
+                <h4 class="text-capitalize text-pink px-4">how to find us</h4>
+                <!--contact info-->
+                <div class="contact-details px-4">
+                    <dl>
+                        <dt><h5 class="mt-3">The Cake Shop</h5></dt>
+                        <dd>**Addresss** : No.8,Ton That Thuyet,My Dinh,Cau Giay,Ha Noi</dd>
+                        <dd>**Phone** : +0345157732</dd>
+                        <dd>**Phone** : +0345157732</dd>
+                        <dd>**Email** : TeamDev200@gmail.com</dd>
+                    </dl>
+                </div>
+                <div class="d-flex justify-content-around">
+                    <a href="#" class="contact-icon">
+                        <i class='fab fa-facebook-square'></i>
+                    </a>
+                    <a href="#" class="contact-icon">
+                        <i class='fab fa-twitter'></i>
+                    </a>
+                    <a href="#" class="contact-icon">
+                        <i class='fab fa-instagram'></i>
+                    </a>
+                    <a href="#" class="contact-icon">
+                        <i class='fab fa-google-plus'></i>
+                    </a>
+                </div>
+                <!--end of contact info-->
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 px-4 py-3">
+                <h4 class="text-capitalize text-pink px-4">sign up now</h4>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="form">
+                            <!--name-->
+                            <div class="form-group mb-0">
+                                <label for="name" class="text-capitalize mb-0">**name**</label>
+                                <input type="text" class="form-control mb-2" placeholder="Enter your Name" id="name">
+                            </div>
+                            <!--email-->
+                            <div class="form-group mb-0">
+                                <label for="email" class="text-capitalize mb-0">**email**</label>
+                                <input type="text" class="form-control mb-2" placeholder="Enter your E-mail" id="email">
+                            </div>
+                            <!--send button-->
+                            <button type="submit" class="btn btn-pink text-uppercase mt-3">sign up</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--end of contact section-->
+<!--footer-->
+<footer class="footer">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-8 mx-auto text-center">
+                <p class="mb-0 p-3 text-capitalize">All copyrights are released Team Dev 200</p>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--end of footer-->
+<!--jquery-->
+<script src="js/jquery-3.3.1.min.js"></script>
+<!--bootstrap js-->
+<script src="js/bootstrap.bundle.min.js"></script>
+<!--main js-->
+<script src="js/main.js"></script>
+<script src="js/store.js" async></script>
+</body>
+</html>

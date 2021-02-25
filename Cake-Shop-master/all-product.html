@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="images/logo2.png">
+    <title>Cake Shop</title>
+    <!--bootstrap css-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!--main css-->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--font awesome-->
+    <script src="js/all.js"></script>
+    <script src="https://kit.fontawesome.com/f8199a7d4e.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+<header id="header">
+    <!--navbar-->
+    <nav class="navbar navbar-expand-lg mx-4">
+        <!--logo-->
+        <a href="index.html" class="navbar-brand">
+            <!--
+                https://www.iconfinder.com/icons/2138186/baker_bakery_cupcake_dessert_food_icon
+            -->
+            <img src="images/thecakeshop.png" alt="main icon" width="155px">
+        </a>
+        <!-- end of logo-->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
+                <span class="toggler-icon">
+                    <i class="fas fa-bars"></i>
+                 </span>
+        </button>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <!--menu-->
+            <ul class="navbar-nav text-capitalize mx-auto" id="menu">
+                <li class="nav-item active">
+                    <a href="index.html" class="nav-link">home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about-us.html" class="nav-link">aboutUs</a>
+                </li>
+                <li class="nav-item">
+                    <a href="all-product.html" class="nav-link">allProducts</a>
+                </li>
+                <li class="nav-item">
+                    <a href="order-form.html" class="nav-link">order</a>
+                </li>
+                <li class="nav-item">
+                    <a href="news.html" class="nav-link">news</a>
+                </li>
+                <li class="nav-item" id="sm-cart">
+                    <a href="#" class="nav-link" data-toggle="modal" data-target="#cart-modal">cart</a>
+                </li>
+            </ul>
+            <!--end of menu-->
+            <div class="nav-info-items d-none d-lg-flex">
+                <!--phone info-->
+                <div class="nav-info align-items-center d-flex justify-content-between mx-lg-5">
+                        <span class="nav-icon mx-lg-3">
+                        </span>
+                    <a href="sign-up.html"><button type="submit" class="btn btn-pink text-uppercase mt-3" style="margin: 10px">sign up</button></a>
+                    <a href="sign-in.html"><button type="submit" class="btn btn-pink text-uppercase mt-3" style="margin: 10px">sign in</button></a>
+                </div>
+                <!--end of phone info-->
+<!--                <div class="nav-info align-items-center d-flex justify-content-between mx-lg-1">-->
+<!--                    <div id="myNav" class="overlay">-->
+<!--                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>-->
+<!--                        <div class="overlay-content">-->
+<!--                            <a href="sign-in.html">Sign in</a>-->
+<!--                            <a href="sign-up.html">Sign up</a>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <a href="#"><i class="fas fa-user-circle" onclick="openNav()" style="font-size: 40px; color: hotpink"></i></a>-->
+<!--                </div>-->
+                <!--cart info-->
+                <button type="button" class="btn btn-pink align-items-center d-flex justify-content-between mx-lg-5"
+                        data-toggle="modal" data-target="#myModal">
+                        <span class="cart-info_icon mx-lg-3">
+                            <i class="fa fa-shopping-bag"></i>
+                        </span>
+                </button>
+
+                <!-- The Modal -->
+                <div class="modal fade" id="myModal">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <h4 class="modal-title d-flex justify-content-between" style="text-align: center;">
+                                    Shopping Cart Information</h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                                <div class="cart-row">
+                                    <span class="cart-item cart-header cart-column">Name</span>
+                                    <span class="cart-price cart-header cart-column">Price</span>
+                                    <span class="cart-quantity cart-header cart-column">Quantity</span>
+                                </div>
+                                <div class="cart-items">
+                                    <div class="cart-row">
+                                        <div class="cart-item cart-column">
+                                            <img src="images-cart/cupcake-1.jpg" alt="" class="img-fluid rounded-circle">
+                                            <input type="hidden" value="">
+                                            <span class="cart-item-title">Bla bla</span>
+                                        </div>
+                                        <span class="cart-price cart-column">$5</span>
+                                        <div class="cart-quantity cart-column">
+                                            <input class="cart-quantity-input" type="number" value="1">
+                                            <button class="btn btn-danger" type="button">Remove</button>
+                                        </div>
+                                    </div>
+                                    <div class="cart-row">
+                                        <div class="cart-item cart-column">
+                                            <img src="images-cart/cupcake-2.jpg" alt="" class="img-fluid rounded-circle">
+                                            <input type="hidden" value="">
+                                            <span class="cart-item-title">Alo alo</span>
+                                        </div>
+                                        <span class="cart-price cart-column">$5</span>
+                                        <div class="cart-quantity cart-column">
+                                            <input class="cart-quantity-input" type="number" value="1">
+                                            <button class="btn btn-danger" type="button">Remove</button>
+                                        </div>
+                                    </div>
+                                    <div class="cart-total">
+                                        <strong class="cart-total-title">Total:</strong>
+                                        <span class="cart-total-price">$10</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary close-footer" id="close">Close</button>
+                                <a href="cart.html"><button type="button" class="btn btn-primary order">Check out</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--end of cart info-->
+            </div>
+        </div>
+    </nav>
+</header>
+<section class="about-bcg">
+    <div class="container">
+        <div class="row">
+            <div class="col-10 mx-auto text-center">
+                <h3 class="text-capitalize mb-0"> welcome to our</h3>
+                <strong class="banner-title text-capitalize">cake shop</strong>
+                <div class="service-hour">
+                    <h6 class="text-uppercase"><strong> service hour </strong></h6>
+                    <p class="mb-0 text-capitalize text-muted">08:00 - 22:00 <strong>monday - saturday</strong></p>
+                    <p class="mb-0 text-capitalize text-muted">09:00 - 21:00 <strong>only sunday</strong></p>
+                </div>
+                <div class="crumbs">
+                    <nav aria-level="breadcrumb" class="breadcrumb-items">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="index.html">home</a></li>
+                            <li class="breadcrumb-item"><a href="about-us.html">our store</a></li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="store py-5 bg-gray" id="store">
+    <div class="container">
+        <!--section title-->
+        <div class="row">
+            <div class="col-10 text-center mx-auto col-md-6">
+                <h1 class="text-capitalize"> our <strong class="banner-title"> store </strong></h1>
+            </div>
+        </div>
+        <!--end od section title-->
+        <!--filter button-->
+        <div class="row">
+            <div class="col-md-12">
+                <!--filter buttons-->
+                <div id="filters" class="button-group text-center">
+                    <button class="btn btn-black text-uppercase m-2 active" data-filter="*">all</button>
+                    <button class="btn btn-black text-uppercase m-2" data-filter=".birthday">birthday</button>
+                    <button class="btn btn-black text-uppercase m-2" data-filter=".anniversary">anniversary</button>
+                    <button class="btn btn-black text-uppercase m-2" data-filter=".engagement">engagement</button>
+                    <button class="btn btn-black text-uppercase m-2" data-filter=".marriage">marriage and so on.
+                    </button>
+                </div>
+                <!--end of filter buttons-->
+            </div>
+        </div>
+        <!--end os filter button-->
+        <!--search box-->
+        <div class="row col-10 mx-auto col-md-6">
+            <div class="input-group mt-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text search-box" id="search-icon">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                    </span>
+                </div>
+                <input type="text" class="form-control" placeholder="items" id="search-item">
+            </div>
+        </div>
+        <!--end of search box-->
+        <!--store items-->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="grid" style="position: relative; height: 1438px;">
+                    <!--single items-->
+                    <div class="element-item col-12 col-md-6 col-lg-4 mx-auto my-3 anniversary"
+                         style="position: absolute; left: 0px; top: 0px;">
+                        <div class="card single-item">
+                            <div class="img-container">
+                                <a href="page/product-1.html">
+                                    <img src="images/cupcake-1.jpg" class="card-img-top store-img" alt="">
+                                </a>
+                                <span class="store-item-icon">
+                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                            <div class="card-body">
+                                <div class="card-text text-capitalize d-flex justify-content-between">
+                                    <h5 class="store-item-name">engagement item</h5>
+                                    <h5 class="store-item-value">$ <strong id="store-item-price"
+                                                                           class="font-weight-bold">5</strong></h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--end of single items-->
+                    <!--single items-->
+                    <div class="element-item col-12 col-md-6 col-lg-4 mx-auto my-3 engagement"
+                         style="position: absolute; left: 370px; top: 0px;">
+                        <div class="card single-item">
+                            <div class="img-container">
+                                <a href="test.html">
+                                    <img src="images/sweet-1.jpg" class="card-img-top store-img" alt="">
+                                </a>
+                                <span class="store-item-icon">
+                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                            <div class="card-body">
+                                <div class="card-text text-capitalize d-flex justify-content-between">
+                                    <h5 class="store-item-name">engagement item</h5>
+                                    <h5 class="store-item-value">$ <strong id="store-item-price"
+                                                                           class="font-weight-bold">5</strong></h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--end of single items-->
+                    <!--single items-->
+                    <div class="element-item col-12 col-md-6 col-lg-4 mx-auto my-3 birthday"
+                         style="position: absolute; left: 740px; top: 0px;">
+                        <div class="card single-item">
+                            <div class="img-container">
+                                <a href="test.html">
+                                    <img src="images/cake-1.jpg" class="card-img-top store-img" alt="">
+                                </a>
+                                <span class="store-item-icon">
+                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                            <div class="card-body">
+                                <div class="card-text text-capitalize d-flex justify-content-between">
+                                    <h5 class="store-item-name">birthday item</h5>
+                                    <h5 class="store-item-value">$ <strong id="store-item-price"
+                                                                           class="font-weight-bold">5</strong></h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--end of single items-->
+                    <!--single items-->
+                    <div class="element-item col-12 col-md-6 col-lg-4 mx-auto my-3 marriage"
+                         style="position: absolute; left: 0px; top: 359.5px;">
+                        <div class="card single-item">
+                            <div class="img-container">
+                                <a href="test.html">
+                                    <img src="images/doughnut-1.jpg" class="card-img-top store-img" alt="">
+                                </a>
+                                <span class="store-item-icon">
+                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                            <div class="card-body">
+                                <div class="card-text text-capitalize d-flex justify-content-between">
+                                    <h5 class="store-item-name">marriage item</h5>
+                                    <h5 class="store-item-value">$ <strong id="store-item-price"
+                                                                           class="font-weight-bold">5</strong></h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--end of single items-->
+                    <!--single items-->
+                    <div class="element-item col-12 col-md-6 col-lg-4 mx-auto my-3 anniversary"
+                         style="position: absolute; left: 370px; top: 359.5px;">
+                        <div class="card single-item">
+                            <div class="img-container">
+                                <a href="test.html">
+                                    <img src="images/cupcake-2.jpg" class="card-img-top store-img" alt="">
+                                </a>
+                                <span class="store-item-icon">
+                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                            <div class="card-body">
+                                <div class="card-text text-capitalize d-flex justify-content-between">
+                                    <h5 class="store-item-name">anniversary item</h5>
+                                    <h5 class="store-item-value">$ <strong id="store-item-price"
+                                                                           class="font-weight-bold">10</strong></h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--end of single items-->
+                    <!--single items-->
+                    <div class="element-item col-12 col-md-6 col-lg-4 mx-auto my-3 engagement"
+                         style="position: absolute; left: 740px; top: 359.5px;">
+                        <div class="card single-item">
+                            <div class="img-container">
+                                <a href="test.html">
+                                    <img src="images/sweet-2.jpg" class="card-img-top store-img" alt="">
+                                </a>
+                                <span class="store-item-icon">
+                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                            <div class="card-body">
+                                <div class="card-text text-capitalize d-flex justify-content-between">
+                                    <h5 class="store-item-name">engagement item</h5>
+                                    <h5 class="store-item-value">$ <strong id="store-item-price"
+                                                                           class="font-weight-bold">10</strong></h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--end of single items-->
+                    <!--single items-->
+                    <div class="element-item col-12 col-md-6 col-lg-4 mx-auto my-3 birthday"
+                         style="position: absolute; left: 0px; top: 719px;">
+                        <div class="card single-item">
+                            <div class="img-container">
+                                <a href="test.html">
+                                    <img src="images/cake-2.jpg" class="card-img-top store-img" alt="">
+                                </a>
+                                <span class="store-item-icon">
+                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                            <div class="card-body">
+                                <div class="card-text text-capitalize d-flex justify-content-between">
+                                    <h5 class="store-item-name">birthday item</h5>
+                                    <h5 class="store-item-value">$ <strong id="store-item-price"
+                                                                           class="font-weight-bold">10</strong></h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--end of single items-->
+                    <!--single items-->
+                    <div class="element-item col-12 col-md-6 col-lg-4 mx-auto my-3 marriage"
+                         style="position: absolute; left: 370px; top: 719px;">
+                        <div class="card single-item">
+                            <div class="img-container">
+                                <a href="test.html">
+                                    <img src="images/doughnut-2.jpg" class="card-img-top store-img" alt="">
+                                </a>
+                                <span class="store-item-icon">
+                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                            <div class="card-body">
+                                <div class="card-text text-capitalize d-flex justify-content-between">
+                                    <h5 class="store-item-name">marriage item</h5>
+                                    <h5 class="store-item-value">$ <strong id="store-item-price"
+                                                                           class="font-weight-bold">10</strong></h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--end of single items-->
+                    <!--single items-->
+                    <div class="element-item col-12 col-md-6 col-lg-4 mx-auto my-3 anniversary"
+                         style="position: absolute; left: 740px; top: 719px;">
+                        <div class="card single-item">
+                            <div class="img-container">
+                                <a href="test.html">
+                                    <img src="images/cupcake-3.jpg" class="card-img-top store-img" alt="">
+                                </a>
+                                <span class="store-item-icon">
+                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                            <div class="card-body">
+                                <div class="card-text text-capitalize d-flex justify-content-between">
+                                    <h5 class="store-item-name">anniversary item</h5>
+                                    <h5 class="store-item-value">$ <strong id="store-item-price"
+                                                                           class="font-weight-bold">15</strong></h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--end of single items-->
+                    <!--single items-->
+                    <div class="element-item col-12 col-md-6 col-lg-4 mx-auto my-3 engagement"
+                         style="position: absolute; left: 0px; top: 1078.5px;">
+                        <div class="card single-item">
+                            <div class="img-container">
+                                <a href="test.html">
+                                    <img src="images/sweet-3.jpg" class="card-img-top store-img" alt="">
+                                </a>
+                                <span class="store-item-icon">
+                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                            <div class="card-body">
+                                <div class="card-text text-capitalize d-flex justify-content-between">
+                                    <h5 class="store-item-name">engagement item</h5>
+                                    <h5 class="store-item-value">$ <strong id="store-item-price"
+                                                                           class="font-weight-bold">15</strong></h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--end of single items-->
+                    <!--single items-->
+                    <div class="element-item col-12 col-md-6 col-lg-4 mx-auto my-3 birthday"
+                         style="position: absolute; left: 370px; top: 1078.5px;">
+                        <div class="card single-item">
+                            <div class="img-container">
+                                <button class="store-item-icon">
+                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                </button>
+                                <a href="test.html">
+                                    <img src="images/cake-3.jpg" class="card-img-top store-img" alt="">
+                                </a>
+                                <div class="card-text card-body text-capitalize d-flex justify-content-between">
+                                    <h5 class="store-item-name">birthday item</h5>
+                                    <h5 class="store-item-value">$ <strong id="store-item-price"
+                                                                           class="font-weight-bold">15</strong></h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--end of single items-->
+                    <!--single items-->
+                    <div class="element-item col-12 col-md-6 col-lg-4 mx-auto my-3 marriage"
+                         style="position: absolute; left: 740px; top: 1078.5px;">
+                        <div class="card single-item">
+                            <div class="img-container">
+                                <a href="test.html">
+                                    <img src="images/doughnut-3.jpg" class="card-img-top store-img" alt="">
+                                </a>
+                                <button class="store-item-icon">
+                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                </button>
+                                <div class="card-text card-body text-capitalize d-flex justify-content-between">
+                                    <h5 class="store-item-name">marriage item</h5>
+                                    <h5 class="store-item-value">$ <strong id="store-item-price"
+                                                                           class="font-weight-bold">15</strong></h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--end of single items-->
+                </div>
+            </div>
+        </div>
+        <!--end of store items-->
+    </div>
+    <div class=" map py-2 col-10 mx-auto d-flex justify-content-center align-items-center">
+        <div class="pagination">
+            <a href="#">&laquo;</a>
+            <a href="#" class="active">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+            <a href="#">6</a>
+            <a href="#">&raquo;</a>
+        </div>
+    </div>
+</section>
+<section class="map py-2">
+    <div class="container">
+        <div class="row">
+            <!--section title-->
+            <div class="col-10 mx-auto d-flex justify-content-center align-items-center">
+                <h1 class="text-capitalize"> contact <strong class="banner-title"> us </strong></h1>
+            </div>
+            <!--end of section title-->
+        </div>
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <!--google map-->
+                <div class="embed-responsive embed-responsive-21by9">
+                    <iframe class="embed-responsive-item"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.0966890657864!2d105.78009371540224!3d21.028816893151134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313455f9bdf0e1c7%3A0x26caee8e7662dd9b!2zRlBUIEFwdGVjaCBIw6AgTuG7mWk!5e0!3m2!1svi!2s!4v1610006568174!5m2!1svi!2s"
+                            width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""
+                            aria-hidden="false" tabindex="0"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="contact py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-12 px-4 py-3">
+                <h4 class="text-capitalize text-pink px-4">contact form</h4>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="form">
+                            <!--name-->
+                            <div class="form-group mb-0">
+                                <input type="text" class="form-control mb-2" placeholder="Enter your Name" id="name">
+                            </div>
+                            <!--email-->
+                            <div class="form-group mb-0">
+                                <input type="text" class="form-control mb-2" placeholder="Enter your E-mail" id="email">
+                            </div>
+                            <!--message-->
+                            <div class="form-group mb-0">
+                                <textarea name="message" class="form-control mb-2" placeholder="Your Message"
+                                          id="message" rows="2"></textarea>
+                            </div>
+                            <!--send button-->
+                            <button type="submit" class="btn btn-pink btn-block text-uppercase">send</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 px-4 py-3">
+                <h4 class="text-capitalize text-pink px-4">how to find us</h4>
+                <!--contact info-->
+                <div class="contact-details px-4">
+                    <dl>
+                        <dt><h5 class="mt-3">cake shop</h5></dt>
+                        <dd>addresss : No.8 Ton That Thuyet, My Dinh, Nam Tu Liem, Hanoi</dd>
+                        <dd>phone : +11 123 456 789</dd>
+                        <dd>email : teamdev200@gmail.com</dd>
+                    </dl>
+                </div>
+                <div class="d-flex justify-content-around">
+                    <a href="#" class="contact-icon">
+                        <i class='fab fa-facebook-square'></i>
+                    </a>
+                    <a href="#" class="contact-icon">
+                        <i class='fab fa-twitter'></i>
+                    </a>
+                    <a href="#" class="contact-icon">
+                        <i class='fab fa-instagram'></i>
+                    </a>
+                    <a href="#" class="contact-icon">
+                        <i class='fab fa-google-plus'></i>
+                    </a>
+                </div>
+                <!--end of contact info-->
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 px-4 py-3">
+                <h4 class="text-capitalize text-pink px-4">sign up now</h4>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="form">
+                            <!--name-->
+                            <div class="form-group mb-0">
+                                <label for="name" class="text-capitalize mb-0">**name**</label>
+                                <input type="text" class="form-control mb-2" placeholder="Enter your Name" id="name">
+                            </div>
+                            <!--email-->
+                            <div class="form-group mb-0">
+                                <label for="email" class="text-capitalize mb-0">**email**</label>
+                                <input type="text" class="form-control mb-2" placeholder="Enter your E-mail" id="email">
+                            </div>
+                            <!--send button-->
+                            <button type="submit" class="btn btn-pink text-uppercase mt-3">sign up</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--footer-->
+<footer class="footer">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-8 mx-auto text-center">
+                <p class="mb-0 p-3 text-capitalize">All copyrights are released Team Dev 200.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--end of footer-->
+<!--jquery-->
+<script src="js/jquery-3.3.1.min.js"></script>
+<!--bootstrap js-->
+<script src="js/bootstrap.bundle.min.js"></script>
+<!--main js-->
+<script src="js/main.js"></script>
+<script src="js/store.js"></script>
+<!--isotop filtering js-->
+<script src="js/isotope.min.js"></script>
+<script>
+    var $grid = $('.grid').isotope({
+        itemSelector: '.element-item',
+        layoutMode: 'fitRows'
+    });
+    var filterFns = {
+        numberGreaterThan50: function () {
+            var number = $(this).find('.number').text();
+            return parseInt(number, 10) > 50;
+        },
+        ium: function () {
+            var name = $(this).find('.name').text();
+            return name.match(/ium$/);
+        }
+    };
+    $filters = $('#filters').on('click', 'button', function () {
+        var $this = $(this);
+        var filterValue;
+        if ($this.is('.is-checked')) {
+            filterValue = '*';
+        } else {
+            filterValue = $this.attr('data-filter');
+            $filters.find('.is-checked').removeClass('is-checked');
+        }
+        filterValue = filterFns[filterValue] || filterValue;
+        $grid.isotope({filter: filterValue});
+    });
+</script>
+</body>
+</html>

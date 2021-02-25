@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="images/logo2.png">
+    <title>Cake Shop</title>
+    <!--bootstrap css-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!--main css-->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/test.css">
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="css/test-2.css">
+    <!--font awesome-->
+    <script src="js/all.js"></script>
+    <script src="https://kit.fontawesome.com/f8199a7d4e.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+<header id="header">
+    <!--navbar-->
+    <nav class="navbar navbar-expand-lg mx-4">
+        <!--logo-->
+        <a href="index.html" class="navbar-brand">
+            <!--
+                https://www.iconfinder.com/icons/2138186/baker_bakery_cupcake_dessert_food_icon
+            -->
+            <img src="images/thecakeshop.png" alt="main icon" width="155px">
+        </a>
+        <!-- end of logo-->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
+                <span class="toggler-icon">
+                    <i class="fas fa-bars"></i>
+                 </span>
+        </button>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <!--menu-->
+            <ul class="navbar-nav text-capitalize mx-auto" id="menu">
+                <li class="nav-item active">
+                    <a href="#header" class="nav-link">home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about-us.html" class="nav-link">aboutUs</a>
+                </li>
+                <li class="nav-item">
+                    <div class="dropdown-link">
+                        <a href="all-product.html" class="nav-link">allProducts</a>
+                        <ul class="dropdown-content">
+                            <li class="Linklist__Item">
+                                <a href="#" class="Link Link--primary">Birthday</a>
+                            </li>
+                            <li class="Linklist__Item">
+                                <a href="#" class="Link Link--primary">Anniversary</a>
+                            </li>
+                            <li class="Linklist__Item">
+                                <a href="#" class="Link Link--primary">Engagement</a>
+                            </li>
+                            <li class="Linklist__Item">
+                                <a href="#" class="Link Link--primary">Marriage and so on</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="order-form.html" class="nav-link">order</a>
+                </li>
+                <li class="nav-item">
+                    <a href="news.html" class="nav-link">news</a>
+                </li>
+                <li class="nav-item" id="sm-cart">
+                    <a href="#" class="nav-link" data-toggle="modal" data-target="#cart-modal">cart</a>
+                </li>
+            </ul>
+            <!--end of menu-->
+            <div class="nav-info-items d-none d-lg-flex">
+                <!--phone info-->
+                <div class="nav-info align-items-center d-flex justify-content-between mx-lg-5">
+                        <span class="nav-icon mx-lg-3">
+                        </span>
+                    <a href="sign-up.html">
+                        <button type="submit" class="btn btn-pink text-uppercase mt-3" style="margin: 10px">sign up
+                        </button>
+                    </a>
+                    <a href="sign-in.html">
+                        <button type="submit" class="btn btn-pink text-uppercase mt-3" style="margin: 10px">sign in
+                        </button>
+                    </a>
+                </div>
+                <button type="button" class="btn btn-pink align-items-center d-flex justify-content-between mx-lg-5"
+                        data-toggle="modal" data-target="#myModal">
+                        <span class="cart-info_icon mx-lg-3">
+                            <i class="fas fa-shopping-cart"></i>
+                        </span>
+                </button>
+
+                <!-- The Modal -->
+                <div class="modal fade" id="myModal">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <h4 class="modal-title d-flex justify-content-between" style="text-align: center;">
+                                    Shopping Cart Information</h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                                <div class="cart-row">
+                                    <span class="cart-item cart-header cart-column">Name</span>
+                                    <span class="cart-price cart-header cart-column">Price</span>
+                                    <span class="cart-quantity cart-header cart-column">Quantity</span>
+                                </div>
+                                <div class="cart-items">
+                                    <div class="cart-row">
+                                        <div class="cart-item cart-column">
+                                            <img src="images-cart/cupcake-1.jpg" alt=""
+                                                 class="img-fluid rounded-circle">
+                                            <input type="hidden" value="">
+                                            <span class="cart-item-title">Bla bla</span>
+                                        </div>
+                                        <span class="cart-price cart-column">$5</span>
+                                        <div class="cart-quantity cart-column">
+                                            <input class="cart-quantity-input" type="number" value="1">
+                                            <button class="btn btn-danger" type="button">Remove</button>
+                                        </div>
+                                    </div>
+                                    <div class="cart-row">
+                                        <div class="cart-item cart-column">
+                                            <img src="images-cart/cupcake-2.jpg" alt=""
+                                                 class="img-fluid rounded-circle">
+                                            <input type="hidden" value="">
+                                            <span class="cart-item-title">Alo alo</span>
+                                        </div>
+                                        <span class="cart-price cart-column">$5</span>
+                                        <div class="cart-quantity cart-column">
+                                            <input class="cart-quantity-input" type="number" value="1">
+                                            <button class="btn btn-danger" type="button">Remove</button>
+                                        </div>
+                                    </div>
+                                    <div class="cart-total">
+                                        <strong class="cart-total-title">Total:</strong>
+                                        <span class="cart-total-price">$10</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary close-footer" id="close">Close</button>
+                                <button type="button" class="btn btn-primary order" id="check-out">Check out</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--end of cart info-->
+            </div>
+        </div>
+    </nav>
+    <!--end of navbar-->
+</header>
+<section class="about-bcg">
+    <div class="container">
+        <div class="row">
+            <div class="col-10 mx-auto text-center">
+                <h3 class="text-capitalize mb-0"> welcome to our</h3>
+                <strong class="banner-title text-capitalize">cake shop</strong>
+                <div class="crumbs">
+                    <nav aria-level="breadcrumb" class="breadcrumb-items">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="index.html">home</a></li>
+                            <li class="breadcrumb-item"><a href="#">check out</a></li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div style="padding: 20px;">
+    <div class="col-xl-7 col-lg-6 offset-lg-0 offset-xl-0 col-sm-12 col-md-7 col-xs-12"
+         style="font-size: 32px; margin-top: 10px;">Checkout
+    </div>
+    <div class="row" style="height: 100%;">
+        <div class="col-xl-7 col-lg-6 offset-lg-0 offset-xl-0 col-sm-12 col-md-6"
+             style="font-size: 14px; overflow-y: auto; height: 100%;">
+            <div style="background-color: white; color: rgb(0, 0, 0); border: 1px solid rgb(224, 224, 224); padding: 10px; margin: 4px; border-radius: 5px;">
+                <div style="text-align: left; padding: 1px;">
+                    <div style="padding: 0px;">
+                        <button type="button"
+                                style="background-color: rgb(255, 255, 255); display: inline-flex; align-items: center; color: rgba(0, 0, 0, 0.54); box-shadow: rgba(0, 0, 0, 0.24) 0px 2px 2px 0px, rgba(0, 0, 0, 0.24) 0px 0px 1px 0px; padding: 0px; border-radius: 2px; border: 1px solid transparent; font-size: 14px; font-weight: 500; font-family: Roboto, sans-serif;">
+                    </div>
+                </div>
+            </div>
+            <div style="background-color: white; color: rgb(0, 0, 0); border: 1px solid rgb(224, 224, 224); padding: 10px; margin: 4px; border-radius: 5px;">
+                <div style="text-align: left; padding: 1px;">
+                    <div style="color: rgb(0, 0, 0); font-weight: 500; font-size: 1rem; border-bottom: 1px solid rgb(224, 224, 224); width: 100%; padding: 10px;">
+                        1.&nbsp;&nbsp;Sign In or Register to complete your order.
+                    </div>
+                    <div style="padding: 20px;">
+                        <div id="checkoutSignup">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div style="color: rgb(252, 51, 89);">Please fill out your details</div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6"><label
+                                        style="font-size: 12px; margin-top: 10px; font-weight: 600; margin-bottom: 5px;">Email</label><input
+                                        autocomplete="off" type="email" placeholder="john.smith@example.com"
+                                        class="form-control" required="" value=""
+                                        style="transition: all 400ms ease 0s; font-weight: 300; font-size: 14px; line-height: 24px; width: 100%; padding: 18px 5px; background: rgb(255, 255, 255); border-top: none; border-right: none; border-bottom: 1px solid rgba(200, 200, 200, 0.5); border-left: none; border-image: initial; outline: none; color: rgb(0, 0, 0); height: 44px; box-sizing: border-box; border-radius: 0px; margin-bottom: 10px;">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6"><label
+                                        style="font-size: 12px; margin-top: 10px; font-weight: 600; margin-bottom: 5px;">First
+                                    Name</label><input autocomplete="off" name="firstname" type="text"
+                                                       placeholder="First Name" class="form-control" required=""
+                                                       value=""
+                                                       style="transition: all 400ms ease 0s; font-weight: 300; font-size: 14px; line-height: 24px; width: 100%; padding: 18px 5px; background: rgb(255, 255, 255); border-top: none; border-right: none; border-bottom: 1px solid rgba(200, 200, 200, 0.5); border-left: none; border-image: initial; outline: none; color: rgb(0, 0, 0); height: 44px; box-sizing: border-box; border-radius: 0px; margin-bottom: 10px;">
+                                </div>
+                                <div class="col-md-6"><label
+                                        style="font-size: 12px; margin-top: 10px; font-weight: 600; margin-bottom: 5px;">Last
+                                    Name</label><input autocomplete="off" type="text" name="lastname"
+                                                       placeholder="Last Name" class="form-control" required="" value=""
+                                                       style="transition: all 400ms ease 0s; font-weight: 300; font-size: 14px; line-height: 24px; width: 100%; padding: 18px 5px; background: rgb(255, 255, 255); border-top: none; border-right: none; border-bottom: 1px solid rgba(200, 200, 200, 0.5); border-left: none; border-image: initial; outline: none; color: rgb(0, 0, 0); height: 44px; box-sizing: border-box; border-radius: 0px; margin-bottom: 10px;">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6"><label
+                                        style="font-size: 12px; margin-top: 10px; font-weight: 600; margin-bottom: 5px;">Phone </label><input
+                                        autocomplete="off" type="tel" name="phone" placeholder="Phone"
+                                        class="form-control" required="" value=""
+                                        style="transition: all 400ms ease 0s; font-weight: 300; font-size: 14px; line-height: 24px; width: 100%; padding: 18px 5px; background: rgb(255, 255, 255); border-top: none; border-right: none; border-bottom: 1px solid rgba(200, 200, 200, 0.5); border-left: none; border-image: initial; outline: none; color: rgb(0, 0, 0); height: 44px; box-sizing: border-box; border-radius: 0px; margin-bottom: 10px;">
+                                </div>
+                                <div class="col-md-6"><label
+                                        style="font-size: 12px; margin-top: 10px; font-weight: 600; margin-bottom: 5px;">dob </label><input
+                                        autocomplete="off" type="date" name="dob" placeholder="dob" class="form-control"
+                                        required="" value=""
+                                        style="transition: all 400ms ease 0s; font-weight: 300; font-size: 14px; line-height: 24px; width: 100%; padding: 18px 5px; background: rgb(255, 255, 255); border-top: none; border-right: none; border-bottom: 1px solid rgba(200, 200, 200, 0.5); border-left: none; border-image: initial; outline: none; color: rgb(0, 0, 0); height: 44px; box-sizing: border-box; border-radius: 0px; margin-bottom: 10px;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="disabledDiv"
+                 style="background-color: white; color: rgb(0, 0, 0); border: 1px solid rgb(224, 224, 224); padding: 10px; margin: 4px; border-radius: 5px;">
+                <div style="color: rgb(0, 0, 0); font-weight: 500; font-size: 1rem; border-bottom: 1px solid rgb(224, 224, 224); width: 100%; padding: 10px;">
+                    2.&nbsp;&nbsp;Order Type
+                </div>
+                <div>
+                    <div style="display: flex; justify-content: space-around; width: 99%;">
+                        <div style="width: 31%; margin: 2px;">
+                            <button type="button" class="btn btn-secondary"
+                                    style="color: rgb(255, 255, 255); background-color: rgb(252, 51, 89); margin: 2px; padding: 15px; width: 100%; font-size: 13px; height: 50px; border-radius: 0px; border: none;">
+                                Delivery
+                            </button>
+                        </div>
+                        <div style="width: 31%; margin: 2px;">
+                            <button type="button" class="btn btn-secondary"
+                                    style="background-color: transparent; margin: 2px; padding: 15px; width: 100%; font-size: 13px; height: 50px; border-radius: 0px; border: 2px solid rgb(38, 38, 38); outline: none; color: rgb(38, 38, 38);">
+                                Pickup
+                            </button>
+                        </div>
+                        <div style="width: 31%; margin: 2px;">
+                            <button type="button" class="btn btn-secondary"
+                                    style="background-color: transparent; margin: 2px; padding: 15px; width: 100%; font-size: 13px; height: 50px; border-radius: 0px; border: 2px solid rgb(38, 38, 38); outline: none; color: rgb(38, 38, 38);">
+                                Eat in
+                            </button>
+                        </div>
+                    </div>
+                    <div></div>
+                </div>
+            </div>
+            <div>
+                <div class="disabledDiv"
+                     style="background-color: white; margin: 4px; color: rgb(0, 0, 0); border: 1px solid rgb(224, 224, 224); padding: 10px; border-radius: 5px;">
+                    <div class="row">
+                        <div class="col-xl-12 col-lg-12 col-sm-12 col-xs-12">
+                            <div style="color: rgb(0, 0, 0); font-weight: 500; font-size: 1rem; border-bottom: 1px solid rgb(224, 224, 224); width: 100%; padding: 10px;">
+                                3.&nbsp;&nbsp;Delivery Time
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-7 col-lg-7  col-md-7 col-sm-12 col-xs-12">
+                            <div style="padding: 10px; margin-top: 20px;"><span
+                                    style="color: rgb(102, 102, 102); font-size: 16px;"><img
+                                    src="https://static.thaodien.me/images/fontawesome/clock-light.svg" alt=""
+                                    style="margin-right: 5px; width: 14px;"> As soon as possible!<span
+                                    class="badge badge-dark" style="margin-left: 10px;">60 mins</span></span></div>
+                        </div>
+                        <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 col-xs-12"><a>
+                            <div style="color: rgb(252, 51, 89); font-size: 13px; font-weight: 500; padding: 10px; margin-top: 10px;">
+                                <button class="btn btn-secondary"
+                                        style="color: rgb(255, 255, 255); background-color: rgb(252, 51, 89); margin: 5px; padding: 15px; width: 100%; font-size: 13px; height: 50px; border-radius: 0px; border: none;">
+                                    Change Delivery Time
+                                </button>
+                            </div>
+                        </a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-5 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <div style="background-color: white; color: rgb(0, 0, 0); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 25px 0px; font-size: 14px; overflow-y: auto; position: sticky; top: 0px;">
+                <div>
+                    <table class="table" style="max-width: 100%; border: none;">
+                        <thead>
+                        <tr style="border: none;">
+                            <th colspan="5"
+                                style="text-align: left; font-weight: 500; font-size: 0.9rem; line-height: 1.41667em; letter-spacing: 0.05em; color: rgb(117, 117, 117); border: none;">
+                                <div style="margin-top: 10px;">Your order</div>
+                            </th>
+                            <th style="border: none; text-align: right;">&nbsp;</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr style="border: none;">
+                            <td colspan="6" style="border: none; margin: 0px;">
+                                <div class="product-options"
+                                     style="text-align: left; width: 100%; position: relative; top: -10px; max-width: 1525px;">
+                                    <div>
+                                        <div><a>
+                                            <div>
+                                                <div style="display: inline-block;">
+                                                    <div style="display: inline-block; width: 40px; height: 40px; border-radius: 22.5px; background-position: center center; background-color: rgb(255, 255, 255); background-image: url(&quot;https://static.thaodien.me/images/stores/cheesecake-ngon/cheesecake-ngon-logo.png&quot;); background-size: cover; position: relative; top: -2px; left: 0px; border: 1px solid rgb(255, 255, 255);"></div>
+                                                    <span style="font-style: normal; font-weight: 500; font-size: 1.2rem; line-height: 1.41667em; letter-spacing: 0.05em; color: rgb(0, 0, 0); position: relative; top: -15px; margin-left: 5px;">Cheesecake Delivery</span><br>
+                                                    <div style="color: rgb(102, 102, 102); font-size: 12px; margin-left: 45px; position: relative; top: -20px;"></div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                            <div style="width: 100%;">
+                                                <table class="table" style="width: 100%;">
+                                                    <tbody>
+                                                    <tr>
+                                                        <td style="padding-top: 20px;">
+                                                            <div class="mini-cart-product">
+                                                                <div class="mini-cart-image"
+                                                                     style="width: 120px; max-width: 307px;"><a
+                                                                        title="Go to Product: Passion Fruit Cheesecake"
+                                                                        style="text-decoration: none; font-weight: 500;"><img
+                                                                        alt="Passion Fruit Cheesecake"
+                                                                        src="images/cupcake-2.jpg"
+                                                                        title="Red Cupcake"
+                                                                        style="max-height: 150px; max-width: 100%;"></a>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td style="padding-top: 20px; padding-left: 0.6rem; width: 100%;">
+                                                            <div class="mini-cart-product">
+                                                                <div class="mini-cart-info" style="position: relative;">
+                                                                    <div class="mini-cart-name"><a
+                                                                            title="Go to Product: Passion Fruit Cheesecake"
+                                                                            style="text-decoration: none; font-weight: 500;"><span
+                                                                            class="product-name"
+                                                                            style="font-style: normal; font-weight: 500; font-size: 0.8rem; line-height: 1.41667em; letter-spacing: 0.05em; text-transform: uppercase; color: rgb(0, 0, 0);">Red Cupcake</span></a>
+                                                                    </div>
+                                                                    <div>
+                                                                        <div class="mini-cart-pricing"><span
+                                                                                class="mini-price"
+                                                                                style="font-style: normal; font-weight: 700; font-size: 0.75rem; line-height: 1.41667em; letter-spacing: 0.05em; text-transform: uppercase; color: rgb(0, 0, 0); float: right;"><span></span></span><br>
+                                                                        </div>
+                                                                        <div class="mini-cart-attributes"><span
+                                                                                class="mini-price"
+                                                                                style="font-style: normal; font-weight: 700; font-size: 0.7rem; line-height: 1.41667em; letter-spacing: 0.05em; color: rgb(0, 0, 0);">Options <br></span><span
+                                                                                style="font-style: normal; font-weight: 300; font-size: 0.9rem; line-height: 1.54545em; letter-spacing: 0.05em; float: none; width: 100%;"><div><div
+                                                                                class="attribute"
+                                                                                style="display: flex; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; width: 130px;"><span
+                                                                                class="label"
+                                                                                style="display: inline-block; font-style: normal; font-weight: 300; font-size: 0.7rem; line-height: 1.54545em; letter-spacing: 0.05em; float: left;"><span>Piece</span><span
+                                                                                class="value"
+                                                                                style="display: inline-block; font-style: normal; font-weight: 600; font-size: 0.7rem; line-height: 1.54545em; letter-spacing: 0.05em; float: right; position: absolute; right: 0px;">$5</span></span></div></div></span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="mini-cart-qty" style="margin-top: 5px;">
+                                                                        <div><span class="label"
+                                                                                   style="font-style: normal; font-weight: 300; font-size: 0.7rem; line-height: 1.41667em; letter-spacing: 0.05em; color: rgb(0, 0, 0); text-transform: capitalize;">Qty:</span><span
+                                                                                class="value"><select
+                                                                                style="border-radius: 0px; appearance: none; height: 30px; width: 30px; text-align-last: center; padding: 5px; font-style: normal; font-weight: 300; font-size: 0.8rem; line-height: 1.41667em; letter-spacing: 0.05em; color: rgb(0, 0, 0); background-color: rgb(255, 255, 255); border: 1px solid rgb(224, 224, 224); margin-left: 2px;"><option
+                                                                                value="1">1</option><option
+                                                                                value="2">2</option><option
+                                                                                value="3">3</option><option
+                                                                                value="4">4</option><option
+                                                                                value="5">5</option><option
+                                                                                value="6">6</option><option
+                                                                                value="7">7</option><option
+                                                                                value="8">8</option><option
+                                                                                value="9">9</option><option value="10">10</option><option
+                                                                                value="11">11</option><option
+                                                                                value="12">12</option><option
+                                                                                value="13">13</option><option
+                                                                                value="14">14</option><option
+                                                                                value="15">15</option><option
+                                                                                value="16">16</option><option
+                                                                                value="17">17</option><option
+                                                                                value="18">18</option><option
+                                                                                value="19">19</option><option
+                                                                                value="20">20</option><option
+                                                                                value="21">21</option><option
+                                                                                value="22">22</option><option
+                                                                                value="23">23</option><option
+                                                                                value="24">24</option><option
+                                                                                value="25">25</option><option
+                                                                                value="26">26</option><option
+                                                                                value="27">27</option><option
+                                                                                value="28">28</option><option
+                                                                                value="29">29</option><option
+                                                                                value="30">30</option><option
+                                                                                value="31">31</option><option
+                                                                                value="32">32</option><option
+                                                                                value="33">33</option><option
+                                                                                value="34">34</option><option
+                                                                                value="35">35</option><option
+                                                                                value="36">36</option><option
+                                                                                value="37">37</option><option
+                                                                                value="38">38</option><option
+                                                                                value="39">39</option><option
+                                                                                value="40">40</option><option
+                                                                                value="41">41</option><option
+                                                                                value="42">42</option><option
+                                                                                value="43">43</option><option
+                                                                                value="44">44</option><option
+                                                                                value="45">45</option><option
+                                                                                value="46">46</option><option
+                                                                                value="47">47</option><option
+                                                                                value="48">48</option><option
+                                                                                value="49">49</option><option
+                                                                                value="50">50</option></select></span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <span class="mini-cart-price"
+                                                                          style="display: block; font-style: normal; font-weight: 700; text-shadow: none; font-size: 0.9rem; line-height: 1.30769em; letter-spacing: 0.05em; text-transform: uppercase; color: rgb(0, 0, 0); float: right; margin-top: 14px;">$5</span>
+                                                                    <p>&nbsp;</p><a class="mini-cart-remove boxclose"
+                                                                                    style="display: block; font-style: normal; font-weight: 800; text-shadow: none; font-size: 0.5rem; line-height: 1.30769em; letter-spacing: 0.05em; text-transform: uppercase; color: rgb(0, 0, 0); float: right; margin-top: 14px; text-align: right;">Remove</a>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <table border="0"
+                                                   style="width: 100%; font-style: normal; font-weight: 300; font-size: 0.6rem; line-height: 1.41667em; letter-spacing: 0.05em; text-transform: uppercase; color: rgb(0, 0, 0);">
+                                                <tbody>
+                                                <tr>
+                                                    <th class="text-right" colspan="3" style="width: 50%;">Delivery
+                                                        Free
+                                                    </th>
+                                                    <th class="text-right" colspan="2">0&nbsp;$</th>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                        <tfoot>
+                        <tr style="font-style: normal; font-weight: 300; font-size: 0.7rem; line-height: 1.41667em; letter-spacing: 0.05em; text-transform: uppercase; color: rgb(0, 0, 0);">
+                            <th>&nbsp;</th>
+                            <th class="text-right" colspan="3" style="width: 38%;">Order SubTotal</th>
+                            <th class="text-right" colspan="2">
+                                <div>$5&nbsp;</div>
+                            </th>
+                        </tr>
+                        <tr style="font-style: normal; font-weight: 300; font-size: 0.9rem; line-height: 1.41667em; letter-spacing: 0.05em; text-transform: uppercase; color: rgb(0, 0, 0);">
+                            <th>&nbsp;</th>
+                            <th class="text-right" colspan="3">Order Total</th>
+                            <th class="text-right" colspan="2">
+                                <div>$5&nbsp;</div>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th colspan="7" style="border-top: none; text-align: center;">
+                                <div style="position: relative; margin: 5px;">
+                                    <div>
+                                        <div></div>
+                                    </div>
+                                </div>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th colspan="7" class="disabledDiv">
+                                <div style="color: rgb(0, 0, 0); font-weight: 500; font-size: 0.9rem; padding: 10px;">
+                                    Payment Method
+                                </div>
+                                <div style="display: flex; justify-content: space-around; width: 97%;">
+                                    <div style="width: 31%; margin: 5px;">
+                                        <button type="button" class="btn btn-secondary"
+                                                style="color: rgb(255, 255, 255); background-color: rgb(252, 51, 89); margin: 5px; padding: 5px; width: 100%; font-size: 13px; height: 50px; border-radius: 0px; border: none;">
+                                            Cash
+                                        </button>
+                                    </div>
+                                    <div style="width: 31%; margin: 5px;">
+                                        <button type="button" class="btn btn-secondary"
+                                                style="background-color: transparent; margin: 5px; padding: 5px; width: 100%; font-size: 13px; height: 50px; border-radius: 0px; border: 2px solid rgb(38, 38, 38); outline: none; color: rgb(38, 38, 38);">
+                                            Bank Transfer
+                                        </button>
+                                    </div>
+                                    <div style="width: 31%; margin: 5px;">
+                                        <button type="button" class="btn btn-secondary"
+                                                style="background-color: transparent; margin: 5px; padding: 5px; width: 100%; font-size: 13px; height: 50px; border-radius: 0px; border: 2px solid rgb(38, 38, 38); outline: none; color: rgb(38, 38, 38);">
+                                            Credit Card
+                                        </button>
+                                    </div>
+                                </div>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th colspan="7" style="border-top: none; text-align: center;"></th>
+                        </tr>
+                        <tr>
+                            <th colspan="7" style="border-top: none; text-align: center;">
+                                <div style="position: relative;">
+                                    <div style=""><span style="font-weight: 300; font-size: 14px;"><a
+                                            style="color: rgb(252, 51, 89);">Login</a> <span>or <a
+                                            style="color: rgb(252, 51, 89);">Register</a></span> to Checkout</span>
+                                    </div>
+                                    <span><span style="color: rgb(252, 51, 89); font-weight: normal;">Please fill out your details</span><button
+                                            type="button" class="btn btn-secondary"
+                                            style="color: rgb(255, 255, 255); background-color: rgb(252, 51, 89); margin: 5px; padding: 15px; width: 100%; font-size: 13px; height: 50px; border-radius: 0px; border: none; cursor: pointer; opacity: 0.5;">Place Order</button></span>
+                                </div>
+                            </th>
+                        </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="map py-2">
+    <div class="container">
+        <div class="row">
+            <!--section title-->
+            <div class="col-10 mx-auto d-flex justify-content-center align-items-center">
+                <h1 class="text-capitalize"> contact <strong class="banner-title"> us </strong></h1>
+            </div>
+            <!--end of section title-->
+        </div>
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <!--google map-->
+                <div class="embed-responsive embed-responsive-21by9">
+                    <iframe class="embed-responsive-item"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.0966890657864!2d105.78009371540224!3d21.028816893151134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313455f9bdf0e1c7%3A0x26caee8e7662dd9b!2zRlBUIEFwdGVjaCBIw6AgTuG7mWk!5e0!3m2!1svi!2s!4v1610006568174!5m2!1svi!2s"
+                            width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""
+                            aria-hidden="false" tabindex="0"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="contact py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-12 px-4 py-3">
+                <h4 class="text-capitalize text-pink px-4">contact form</h4>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="form">
+                            <!--name-->
+                            <div class="form-group mb-0">
+                                <input type="text" class="form-control mb-2" placeholder="Enter your Name" id="name">
+                            </div>
+                            <!--email-->
+                            <div class="form-group mb-0">
+                                <input type="text" class="form-control mb-2" placeholder="Enter your E-mail" id="email">
+                            </div>
+                            <!--message-->
+                            <div class="form-group mb-0">
+                                <textarea name="message" class="form-control mb-2" placeholder="Your Message"
+                                          id="message" rows="2"></textarea>
+                            </div>
+                            <!--send button-->
+                            <button type="submit" class="btn btn-pink btn-block text-uppercase">send</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 px-4 py-3">
+                <h4 class="text-capitalize text-pink px-4">how to find us</h4>
+                <!--contact info-->
+                <div class="contact-details px-4">
+                    <dl>
+                        <dt><h5 class="mt-3">cake shop</h5></dt>
+                        <dd>addresss : No.8 Ton That Thuyet, My Dinh, Nam Tu Liem, Hanoi</dd>
+                        <dd>phone : +11 123 456 789</dd>
+                        <dd>email : teamdev200@gmail.com</dd>
+                    </dl>
+                </div>
+                <div class="d-flex justify-content-around">
+                    <a href="#" class="contact-icon">
+                        <i class='fab fa-facebook-square'></i>
+                    </a>
+                    <a href="#" class="contact-icon">
+                        <i class='fab fa-twitter'></i>
+                    </a>
+                    <a href="#" class="contact-icon">
+                        <i class='fab fa-instagram'></i>
+                    </a>
+                    <a href="#" class="contact-icon">
+                        <i class='fab fa-google-plus'></i>
+                    </a>
+                </div>
+                <!--end of contact info-->
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 px-4 py-3">
+                <h4 class="text-capitalize text-pink px-4">sign up now</h4>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="form">
+                            <!--name-->
+                            <div class="form-group mb-0">
+                                <label for="name" class="text-capitalize mb-0">**name**</label>
+                                <input type="text" class="form-control mb-2" placeholder="Enter your Name" id="name">
+                            </div>
+                            <!--email-->
+                            <div class="form-group mb-0">
+                                <label for="email" class="text-capitalize mb-0">**email**</label>
+                                <input type="text" class="form-control mb-2" placeholder="Enter your E-mail" id="email">
+                            </div>
+                            <!--send button-->
+                            <button type="submit" class="btn btn-pink text-uppercase mt-3">sign up</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--end of contact section-->
+<!--footer-->
+<footer class="footer">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-8 mx-auto text-center">
+                <p class="mb-0 p-3 text-capitalize">All copyrights are released Team Dev 200.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="js/cart.js"></script>
+</body>
+</html>
